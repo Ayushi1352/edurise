@@ -1,0 +1,238 @@
+{
+  "common": {
+    "metadata": {
+      "title": "EduRise Learning Academy | Learn Today. Lead Tomorrow.",
+      "description": "Discover career-focused management programs, expert faculty, and industry-ready learning at EduRise Learning Academy.",
+      "lang": "en"
+    },
+    "announcement": {
+      "text": "Classes will be held online until Friday 8 May 2026. For more information, please",
+      "linkText": "see here.",
+      "linkUrl": "#contact"
+    },
+    "company": {
+      "name": "EduRise",
+      "logo": "/edurise-logo.png",
+      "logoAlt": "EduRise Learning Academy",
+      "contactItems": [
+        {
+          "id": "email",
+          "icon": "✉",
+          "text": "info@eduriseacademy.com",
+          "url": "mailto:info@eduriseacademy.com"
+        },
+        {
+          "id": "phone",
+          "icon": "⌕",
+          "text": "+1 (555) 123-7890",
+          "url": "tel:+15551237890"
+        },
+        {
+          "id": "address",
+          "icon": "⌖",
+          "text": "1234, Education Lane, New York, NY 10001, USA",
+          "url": ""
+        }
+      ]
+    },
+    "footer": {
+      "description": "Empowering students with quality education, industry exposure, and career-ready skills for a brighter and successful future.",
+      "copyrightText": "© 2026 EduRise Learning Academy. All Rights Reserved.",
+      "links": [
+        { "id": "home", "label": "Home", "url": "#top" },
+        { "id": "about", "label": "About Us", "url": "#about" },
+        { "id": "courses", "label": "Our Courses", "url": "#courses" },
+        { "id": "why", "label": "Why Choose Us", "url": "#why-edurise" },
+        { "id": "faqs", "label": "FAQs", "url": "#faqs" },
+        { "id": "contact", "label": "Contact Us", "url": "#contact" }
+      ],
+      "socialLinks": [
+        { "id": "facebook", "label": "Facebook", "text": "f", "url": "#top" },
+        { "id": "instagram", "label": "Instagram", "text": "◎", "url": "#top" },
+        { "id": "x", "label": "X", "text": "𝕏", "url": "#top" },
+        { "id": "youtube", "label": "YouTube", "text": "▶", "url": "#top" }
+      ]
+    }
+  },
+  "categories": {
+    "Education": {
+      "sections": {
+        "Header": {
+          "variants": {
+            "EduRiseHeader1": {
+              "homeLabel": "Home",
+              "contactButton": { "id": "contact", "label": "Contact Us", "url": "#contact" },
+              "navLinks": [
+                { "id": "home", "label": "Home", "url": "#top" },
+                { "id": "about", "label": "About Us", "url": "#about" },
+                { "id": "courses", "label": "Our Courses", "url": "#courses" },
+                { "id": "why", "label": "Why Choose Us", "url": "#why-edurise" },
+                { "id": "faculty", "label": "Our Faculty", "url": "#faculty" },
+                { "id": "student-work", "label": "Student Work", "url": "#student-work" },
+                { "id": "faqs", "label": "FAQs", "url": "#faqs" }
+              ]
+            }
+          }
+        },
+        "Hero": {
+          "variants": {
+            "EduRiseHero1": {
+              "id": "home",
+              "kicker": "Learn today. Lead tomorrow.",
+              "titleTop": "Welcome To",
+              "titleAccent": "EduRise",
+              "titleBottom": "Learning Academy",
+              "description": "We want every student and study partner to feel that they are part of a common good and cohesive team. We help our teams form stronger relationships.",
+              "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2200&q=90",
+              "imageAlt": "University students walking across campus",
+              "primaryButton": { "label": "Our Courses", "url": "#courses" },
+              "secondaryButton": { "label": "Contact Us", "url": "#contact" },
+              "socialLinks": [
+                { "id": "facebook", "label": "Facebook", "text": "f" },
+                { "id": "linkedin", "label": "LinkedIn", "text": "in" },
+                { "id": "instagram", "label": "Instagram", "text": "◎" },
+                { "id": "youtube", "label": "YouTube", "text": "▶" }
+              ]
+            }
+          }
+        },
+        "Intro": {
+          "variants": {
+            "EduRiseIntro1": {
+              "id": "about",
+              "admissionLabel": "Admissions-2026 :",
+              "admissionText": "PGDM, PGDM(IB), PGDM(FM) & PGDM(BDA) (Batch 2026–28)",
+              "titleTop": "Welcome to",
+              "titleAccent": "EduRise Learning Academy",
+              "description": "EduRise Learning Academy (ERLA), established in 2010, is a premier business school in India known for its excellence in management education, research, and industry engagement. Located in New Delhi, ERLA offers a dynamic and career-oriented learning environment, fostering innovation, leadership, and global perspectives. With a focus on academic rigor, corporate exposure, and holistic development, the institute prepares future-ready professionals to make a meaningful impact in the business world."
+            }
+          }
+        },
+        "Recognitions": {
+          "variants": {
+            "EduRiseRecognitions1": {
+              "title": "Recognitions",
+              "titleAccent": "& Approvals",
+              "items": [
+                { "id": "saqs", "type": "accreditation", "title": "SAQS", "subtitle": "ACCREDITED" },
+                { "id": "great-place", "type": "great-place", "title": "Great Place To Work.", "subtitle": "Certified" },
+                { "id": "aacsb", "type": "aacsb", "title": "AACSB", "subtitle": "Business Education Alliance", "footnote": "Member" }
+              ]
+            }
+          }
+        },
+        "Courses": {
+          "variants": {
+            "EduRiseCourses1": {
+              "id": "courses",
+              "eyebrow": "Our Courses",
+              "titleTop": "Explore Our",
+              "titleAccent": "Academic Programs",
+              "description": "Industry-focused management programs designed to build leadership, analytical and strategic skills for a successful career.",
+              "items": [
+                { "id": "pgdm", "title": "PGDM", "description": "Post Graduate Diploma in Management", "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" },
+                { "id": "pgdm-ib", "title": "PGDM (IB)", "description": "PGDM in International Business", "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=85" },
+                { "id": "pgdm-fm", "title": "PGDM (FM)", "description": "PGDM in Financial Management", "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=700&q=85" },
+                { "id": "pgdm-bda", "title": "PGDM (BDA)", "description": "PGDM in Business Data Analytics", "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=85" },
+                { "id": "executive-pgdm", "title": "Executive PGDM", "description": "For Working Professionals", "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" },
+                { "id": "certificate-programs", "title": "Certificate Programs", "description": "Specialized Short-Term Management Courses", "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85" }
+              ]
+            }
+          }
+        },
+        "Why": {
+          "variants": {
+            "EduRiseWhy1": {
+              "id": "why-edurise",
+              "eyebrow": "Why Choose EduRise",
+              "titleTop": "The Right Choice for",
+              "titleAccent": "Your Future",
+              "description": "At EduRise, we combine academic excellence, industry exposure, and expert mentorship to help students build strong careers, develop leadership skills, and become future-ready professionals.",
+              "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1100&q=85",
+              "imageAlt": "Students learning together on campus"
+            }
+          }
+        },
+        "Faculty": {
+          "variants": {
+            "EduRiseFaculty1": {
+              "id": "faculty",
+              "eyebrow": "Our Faculty",
+              "titleTop": "Learn from Industry Experts",
+              "titleAccent": "& Academic Leaders",
+              "description": "Our distinguished faculty bring a perfect blend of academic excellence, industry experience, and real-world insights to the classroom.",
+              "items": [
+                { "id": "arjun-sharma", "name": "Dr. Arjun Sharma", "role": "Professor & Program Chair", "focus": "Business Strategy & Business Analytics", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=85" },
+                { "id": "neha-gupta", "name": "Prof. Neha Gupta", "role": "Associate Professor", "focus": "Specialization: Finance & Investment Management", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=85" },
+                { "id": "rohan-mehta", "name": "Dr. Rohan Mehta", "role": "Associate Professor", "focus": "Specialization: Marketing & Digital Business", "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=85" },
+                { "id": "isha-verma", "name": "Prof. Isha Verma", "role": "Assistant Professor", "focus": "Specialization: Human Resource & Organizational Behaviour", "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=85" }
+              ]
+            }
+          }
+        },
+        "Hiring": {
+          "variants": {
+            "EduRiseHiring1": {
+              "id": "student-work",
+              "eyebrow": "Hiring",
+              "titleTop": "Where Our",
+              "titleAccent": "Students Work?",
+              "description": "Our students are hired by leading global and national organizations across diverse industries.",
+              "employers": [
+                "Tech Mahindra", "Barclays", "BlackRock", "Gartner", "accenture", "airtel", "PEPSICO",
+                "Deloitte", "HDFC Bank", "BCG", "TATA", "EY", "Microsoft", "IBM",
+                "Cognizant", "Amazon", "Infosys", "BMW", "Wipro", "ADANI",
+                "Capgemini", "HCL", "KPMG", "P&G", "Nestlé", "VISA", "PwC", "NOVARTIS"
+              ]
+            }
+          }
+        },
+        "Faq": {
+          "variants": {
+            "EduRiseFaq1": {
+              "id": "faqs",
+              "eyebrow": "FAQs",
+              "titleTop": "Answers That Keep You",
+              "titleAccent": "Moving Forward.",
+              "image": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1000&q=85",
+              "imageAlt": "Students studying together on campus",
+              "items": [
+                { "id": "apply", "question": "How do I apply to EduRise Learning Academy?", "answer": "You can apply online through our official website by filling out the application form and submitting the required documents. Our admissions team will guide you through the next steps." },
+                { "id": "requirements", "question": "What are the admission requirements?", "answer": "Applicants should hold a recognized bachelor’s degree. Program-specific eligibility and entrance requirements are shared by our admissions team." },
+                { "id": "international", "question": "Can I apply as an international student?", "answer": "Yes. International applicants are welcome to apply. Contact our admissions team for guidance on documents and application timelines." },
+                { "id": "transfer", "question": "How do I transfer from another institution?", "answer": "Please contact the admissions office with your academic transcripts. Our team will review your previous coursework and explain the transfer process." }
+              ]
+            }
+          }
+        },
+        "Contact": {
+          "variants": {
+            "EduRiseContact1": {
+              "id": "contact",
+              "eyebrow": "Contact Us",
+              "titleTop": "Get in Touch",
+              "titleAccent": "With Us",
+              "description": "Have questions about our courses, admissions, or career opportunities? Send us a message and our team will get back to you shortly.",
+              "form": {
+                "nameLabel": "Your Full Name*",
+                "emailLabel": "Your Email Address*",
+                "phoneLabel": "Your Phone Number*",
+                "interestLabel": "Select Course Interest*",
+                "messageLabel": "Your Message*",
+                "buttonLabel": "Send Message",
+                "courseOptions": [
+                  "PGDM",
+                  "PGDM (International Business)",
+                  "PGDM (Financial Management)",
+                  "PGDM (Business Data Analytics)",
+                  "Executive PGDM",
+                  "Certificate Programs"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
