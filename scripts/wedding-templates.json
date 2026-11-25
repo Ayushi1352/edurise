@@ -1,0 +1,454 @@
+{
+  "common": {
+    "globalUI": {
+      "loadingText": "Loading WedBliss Experience...",
+      "notFoundText": "Page Not Found"
+    },
+    "Footer": {
+      "logoImage": "/main logo/footer_logo.webp",
+      "logoAlt": "WedBliss Luxury Weddings",
+      "brandTitle": "WedBliss",
+      "copyrightText": "Copyright © 2026 WedBliss Luxury Wedding & Event Planning. All rights reserved.  Powered By Lestow",
+      "description": "Crafting bespoke wedding celebrations, lavish receptions, and everlasting memories with timeless elegance, passion, and flawless execution.",
+      "socialLinks": [
+        {
+          "id": "fs1",
+          "icon": "FaFacebookF",
+          "url": "https://www.facebook.com"
+        },
+        {
+          "id": "fs2",
+          "icon": "FaInstagram",
+          "url": "https://www.instagram.com"
+        },
+        {
+          "id": "fs3",
+          "icon": "FaLinkedinIn",
+          "url": "https://www.linkedin.com"
+        },
+        {
+          "id": "fs4",
+          "icon": "FaYoutube",
+          "url": "https://www.youtube.com"
+        }
+      ],
+      "quickLinks": [
+        {
+          "id": "ql1",
+          "label": "Home",
+          "url": "#home"
+        },
+        {
+          "id": "ql2",
+          "label": "About Us",
+          "url": "#about"
+        },
+        {
+          "id": "ql3",
+          "label": "Our Services",
+          "url": "#services"
+        },
+        {
+          "id": "ql4",
+          "label": "Gallery",
+          "url": "#gallery"
+        },
+        {
+          "id": "ql5",
+          "label": "FAQ",
+          "url": "#faq"
+        },
+        {
+          "id": "ql6",
+          "label": "Contact Us",
+          "url": "#contact"
+        }
+      ],
+      "servicesLinks": [
+        {
+          "id": "sl1",
+          "label": "Bespoke Wedding Planning",
+          "url": "#services"
+        },
+        {
+          "id": "sl2",
+          "label": "Exclusive Private Soirees",
+          "url": "#services"
+        },
+        {
+          "id": "sl3",
+          "label": "Grand Corporate Galas",
+          "url": "#services"
+        },
+        {
+          "id": "sl4",
+          "label": "Destination Celebrations",
+          "url": "#services"
+        }
+      ],
+      "contactInfo": {
+        "address": "123 Main St, New York, NY, USA",
+        "phone": "+1 000000000",
+        "email": "info@xyz.com"
+      }
+    }
+  },
+  "categories": {
+    "WedBliss": {
+      "sections": {
+        "Header": {
+          "variants": {
+            "WedBlissHeader2": {
+              "logo": "/main logo/header_logo.webp",
+              "logoAlt": "WedBliss Luxury Logo",
+              "navLinks": [
+                {
+                  "id": "nl-home",
+                  "label": "Home",
+                  "url": "#home"
+                },
+                {
+                  "id": "nl-about",
+                  "label": "About Us",
+                  "url": "#about"
+                },
+                {
+                  "id": "nl-services",
+                  "label": "Our Services",
+                  "url": "#services"
+                },
+                {
+                  "id": "nl-gallery",
+                  "label": "Gallery",
+                  "url": "#gallery"
+                },
+                {
+                  "id": "nl-faq",
+                  "label": "FAQ",
+                  "url": "#faq"
+                }
+              ],
+              "contactButton": {
+                "text": "Contact Us ->",
+                "url": "#contact"
+              }
+            }
+          }
+        },
+        "Hero": {
+          "variants": {
+            "WedBlissHero2": {
+              "subtitle": "CURATING TIMELESS CELEBRATIONS",
+              "title1": "CELEBRATE YOUR",
+              "title2": "LOVE STORY",
+              "description": "From intimate seaside vows to opulent palace receptions, WedBliss orchestrates breathtaking, stress-free weddings tailored to your distinct signature style.",
+              "image1": "/other/hero_banner.webp"
+            }
+          }
+        },
+        "AboutUs": {
+          "variants": {
+            "WedBlissAboutUs2": {
+              "subtitle": "OUR HERITAGE & PASSION",
+              "title1": "Elegance In Every",
+              "title2": "Celebration",
+              "description1": "At WedBliss, we believe your special day should be as effortless as it is extraordinary. Every floral arrangement, lighting hue, and culinary detail is thoughtfully composed.",
+              "description2": "With over a decade of luxury event management across premier venues worldwide, our dedicated concierge team handles every chapter of your journey so you can simply cherish every precious moment.",
+              "stats": [
+                {
+                  "id": "s1",
+                  "number": "650",
+                  "suffix": "+",
+                  "text": "Couples Celebrated",
+                  "icon": "FaUsers"
+                },
+                {
+                  "id": "s2",
+                  "number": "12",
+                  "suffix": "Years",
+                  "text": "Luxury Experience",
+                  "icon": "FaRegCalendarAlt"
+                },
+                {
+                  "id": "s3",
+                  "number": "99",
+                  "suffix": "%",
+                  "text": "Client Satisfaction",
+                  "icon": "FaRegCheckCircle"
+                }
+              ],
+              "imageMain": "/other/about_big.webp",
+              "imageSmall": "/other/about_small.webp"
+            }
+          }
+        },
+        "Services": {
+          "variants": {
+            "WedBlissServices2": {
+              "subtitle": "SIGNATURE OFFERINGS",
+              "title1": "Exquisite Event",
+              "title2": "Curation",
+              "description": "Each celebration is unique. Explore our specialized wedding and event services designed to create memories that linger for a lifetime.",
+              "services": [
+                {
+                  "id": "s1",
+                  "title": "Grand Weddings",
+                  "description": "Comprehensive destination and royal wedding design, venue scouting, couture decor, and day-of orchestration.",
+                  "image": "/other/service_wedding.webp",
+                  "icon": "FaRing",
+                  "url": "#services"
+                },
+                {
+                  "id": "s2",
+                  "title": "Private Soirees",
+                  "description": "Intimate anniversaries, milestone birthdays, and engagement dinners curated with bespoke charm and fine culinary flair.",
+                  "image": "/other/service_private.webp",
+                  "icon": "FaGlassCheers",
+                  "url": "#services"
+                },
+                {
+                  "id": "s3",
+                  "title": "Corporate Galas",
+                  "description": "High-profile award nights, luxury product unveils, and executive summits executed with impeccable precision.",
+                  "image": "/other/service_corporate.webp",
+                  "icon": "FaUsers",
+                  "url": "#services"
+                }
+              ]
+            }
+          }
+        },
+        "WhatWeDo": {
+          "variants": {
+            "WedBlissWhatWeDo2": {
+              "subtitle": "THE WEDBLISS STANDARD",
+              "title1": "Flawless Execution,",
+              "title2": "Artful",
+              "title3": "Detailing",
+              "description": "We partner with elite international suppliers, award-winning florists, and Michelin-inspired chefs to ensure every dimension of your event dazzles.",
+              "image": "/other/what_we_do.webp",
+              "features": [
+                {
+                  "id": "p1",
+                  "icon": "FaBirthdayCake",
+                  "title": "Haute Cuisine & Decor",
+                  "description": "Sensory dining experiences paired with enchanting floral canopies and handcrafted table scapes."
+                },
+                {
+                  "id": "p2",
+                  "icon": "FaMapMarkedAlt",
+                  "title": "Charming Venues",
+                  "description": "Exclusive access to private villas, heritage castles, and sun-kissed coastlines."
+                }
+              ]
+            }
+          }
+        },
+        "Gallery": {
+          "variants": {
+            "WedBlissGallery2": {
+              "subtitle": "PORTFOLIO OF WONDER",
+              "title1": "Unforgettable",
+              "title2": "Memories",
+              "description": "A glimpse into the magical celebrations, heartfelt laughter, and timeless romances we have had the honor to orchestrate.",
+              "images": [
+                {
+                  "id": "gal1",
+                  "image": "/other/gallery_1.webp",
+                  "alt": "Luxury Wedding Mandap & Floral Arch"
+                },
+                {
+                  "id": "gal2",
+                  "image": "/other/gallery_2.webp",
+                  "alt": "Intimate Candlelit Dining Experience"
+                },
+                {
+                  "id": "gal3",
+                  "image": "/other/gallery_3.webp",
+                  "alt": "Bespoke Dessert & Champagne Table"
+                },
+                {
+                  "id": "gal4",
+                  "image": "/other/gallery_4.webp",
+                  "alt": "Grand Ballroom Ambient Production"
+                },
+                {
+                  "id": "gal5",
+                  "image": "/other/gallery_5.webp",
+                  "alt": "Whimsical Celebration Styling"
+                },
+                {
+                  "id": "gal6",
+                  "image": "/other/gallery_6.webp",
+                  "alt": "Romantic Fairy-lit Garden Soiree"
+                }
+              ]
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "WedBlissTestimonials2": {
+              "subtitle": "HEARTFELT WORDS",
+              "title1": "What Our Couples",
+              "title2": "Say About Us",
+              "description": "The greatest reward of our journey is the radiant smile of our brides, grooms, and esteemed hosts.",
+              "testimonials": [
+                {
+                  "id": "t1",
+                  "name": "Sophia & Alexander",
+                  "location": "Destination Wedding, Lake Como",
+                  "quote": "WedBliss transformed our dream into an absolute fairy tale. From the rehearsal dinner to the midnight fireworks, not a single detail went unnoticed. Truly world-class!",
+                  "rating": 5,
+                  "avatar": "/other/about_small.webp"
+                },
+                {
+                  "id": "t2",
+                  "name": "Marcus & Elena",
+                  "location": "Garden Gala, New York",
+                  "quote": "Their poise, creativity, and calm reassurance throughout the planning months took all the stress off our shoulders. Our guests are still raving about the evening!",
+                  "rating": 5,
+                  "avatar": "/other/about_big.webp"
+                },
+                {
+                  "id": "t3",
+                  "name": "Dev & Alisha",
+                  "location": "Palace Wedding, Udaipur",
+                  "quote": "The floral installations and lighting were simply breathtaking. If you want a luxury celebration that feels deeply personal, WedBliss is incomparable.",
+                  "rating": 5,
+                  "avatar": "/other/about_small.webp"
+                },
+                {
+                  "id": "t4",
+                  "name": "Julian & Camille",
+                  "location": "Chateau Wedding, Provence",
+                  "quote": "Every single detail was executed with absolute perfection. Our guests from across the world were enchanted by the seamless coordination and warmth.",
+                  "rating": 5,
+                  "avatar": "/other/about_big.webp"
+                },
+                {
+                  "id": "t5",
+                  "name": "Rohan & Meera",
+                  "location": "Beachfront Vows, Goa",
+                  "quote": "From sunset pheras to the energetic after-party, WedBliss brought vibrant energy, flawless timing, and magnificent design to life.",
+                  "rating": 5,
+                  "avatar": "/other/about_small.webp"
+                },
+                {
+                  "id": "t6",
+                  "name": "Oliver & Charlotte",
+                  "location": "Historic Estate, Cotswolds",
+                  "quote": "Working with WedBliss was effortless. They listened to our wildest ideas and turned them into an unforgettable weekend of celebration.",
+                  "rating": 5,
+                  "avatar": "/other/about_big.webp"
+                }
+              ]
+            }
+          }
+        },
+        "Faq": {
+          "variants": {
+            "WedBlissFaq2": {
+              "subtitle": "CURIOUS MINDS",
+              "title1": "Frequently Asked",
+              "title2": "Questions",
+              "description": "Everything you need to know about starting your bespoke wedding or event journey with WedBliss.",
+              "image": "/other/faq.webp",
+              "faqs": [
+                {
+                  "id": "faq1",
+                  "question": "What is the typical planning timeline for a luxury wedding?",
+                  "answer": "While we frequently plan grand celebrations 9 to 14 months in advance, our nimble concierge team can also design extraordinary weddings with shorter lead times depending on venue availability."
+                },
+                {
+                  "id": "faq2",
+                  "question": "Do you coordinate international destination celebrations?",
+                  "answer": "Yes, destination weddings are our signature specialty. We handle guest logistics, customs liaison, local vendor curation, and on-site event directors worldwide."
+                },
+                {
+                  "id": "faq3",
+                  "question": "How do you tailor the event to our personal taste and budget?",
+                  "answer": "We begin with an in-depth design consultation to create custom mood boards, bespoke menus, and transparent investment allocations tailored precisely to your priorities."
+                },
+                {
+                  "id": "faq4",
+                  "question": "Will our lead planner be on-site throughout the wedding day?",
+                  "answer": "Always. Your dedicated lead coordinator and an experienced on-site production team oversee every moment from dawn until the final guest departure."
+                }
+              ]
+            }
+          }
+        },
+        "Contact": {
+          "variants": {
+            "WedBlissContact2": {
+              "subtitle": "REACH OUR CONCIERGE",
+              "title1": "Let's Begin Your",
+              "title2": "Celebration",
+              "description": "Tell us about your upcoming date, dream setting, and vision. We look forward to creating magic together.",
+              "contactInfo": {
+                "phoneTitle": "Direct Line",
+                "phone": "+1 000000000",
+                "emailTitle": "Private Concierge",
+                "email": "info@xyz.com",
+                "addressTitle": "Headquarters",
+                "address": "123 Main St,\nNew York, NY, USA"
+              },
+              "form": {
+                "title": "Request A Consultation",
+                "description": "Fill out your details below and a dedicated wedding designer will contact you within 24 hours.",
+                "buttonText": "Schedule My Consultation"
+              },
+              "image": "/other/contact.webp",
+              "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            }
+          }
+        }
+      },
+      "templateComponents": {
+        "shared": {
+          "Header": "WedBlissHeader2",
+          "Footer": "WedBlissFooter2"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "HeroSection",
+                "component": "WedBlissHero2"
+              },
+              {
+                "key": "AboutUs",
+                "component": "WedBlissAboutUs2"
+              },
+              {
+                "key": "Services",
+                "component": "WedBlissServices2"
+              },
+              {
+                "key": "WhatWeDo",
+                "component": "WedBlissWhatWeDo2"
+              },
+              {
+                "key": "Gallery",
+                "component": "WedBlissGallery2"
+              },
+              {
+                "key": "Testimonials",
+                "component": "WedBlissTestimonials2"
+              },
+              {
+                "key": "Faq",
+                "component": "WedBlissFaq2"
+              },
+              {
+                "key": "Contact",
+                "component": "WedBlissContact2"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

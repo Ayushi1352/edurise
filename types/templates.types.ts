@@ -1,51 +1,39 @@
-export interface MetadataData {
+import type { CSSProperties } from "react";
+
+export interface ThemeFonts {
+  primary: string;
+  heading: string;
+  ui: string;
+  display: string;
+  footer: string;
+  serif: string;
+}
+
+/** CSS variables set on <html> from templates.json (fonts) */
+export type RootVariables = CSSProperties & {
+  "--font-primary": string;
+  "--font-heading": string;
+  "--font-ui": string;
+  "--font-display": string;
+  "--font-footer": string;
+  "--font-serif": string;
+};
+
+export interface ThemeData {
+  fonts: ThemeFonts;
+}
+
+export interface SiteMetadataData {
   title: string;
   description: string;
+  icon: string;
   lang: string;
 }
 
-export interface TextLink {
+export interface LinkItem {
   id: string;
   label: string;
   url: string;
-}
-
-export interface SocialLink {
-  id: string;
-  label: string;
-  text: string;
-  url?: string;
-}
-
-export interface CompanyData {
-  name: string;
-  logo: string;
-  logoAlt: string;
-  contactItems: {
-    id: string;
-    icon: string;
-    text: string;
-    url: string;
-  }[];
-}
-
-export interface FooterData {
-  description: string;
-  copyrightText: string;
-  links: TextLink[];
-  socialLinks: SocialLink[];
-}
-
-export interface HeaderData {
-  homeLabel: string;
-  contactButton: TextLink;
-  navLinks: TextLink[];
-}
-
-export interface AnnouncementData {
-  text: string;
-  linkText: string;
-  linkUrl: string;
 }
 
 export interface ButtonData {
@@ -53,99 +41,217 @@ export interface ButtonData {
   url: string;
 }
 
-export interface HeroData {
+export interface ContactItem {
   id: string;
-  kicker: string;
+  /** a name from components/ui/Icon.tsx */
+  icon: string;
+  label: string;
+  text: string;
+  url: string;
+}
+
+export interface SocialLink {
+  id: string;
+  icon: string;
+  label: string;
+  url: string;
+}
+
+export interface CompanyData {
+  name: string;
+  tagline: string;
+  logo: string;
+  logoAlt: string;
+  logoWidth: number;
+  logoHeight: number;
+  contactItems: ContactItem[];
+}
+
+export interface FooterData {
+  backgroundImage: string;
+  /** the paragraph under the logo, one entry per line of the design */
+  descriptionLines: string[];
+  linksLabel: string;
+  links: LinkItem[];
+  contactsTitle: string;
+  /** which of the company contact details the footer lists, in order */
+  contactIds: string[];
+  socialTitle: string;
+  socialLabel: string;
+  socialLinks: SocialLink[];
+  /** "{year}" is replaced by the current year */
+  copyrightText: string;
+}
+
+export interface AnnouncementData {
+  icon: string;
+  text: string;
+  linkText: string;
+  linkUrl: string;
+}
+
+export interface HeaderData {
+  announcement: AnnouncementData;
+  logoUrl: string;
+  homeLabel: string;
+  navLinks: LinkItem[];
+  buttonText: string;
+  buttonUrl: string;
+  mainNavLabel: string;
+  mobileNavLabel: string;
+  openMenuLabel: string;
+  closeMenuLabel: string;
+}
+
+/** A title with its highlighted words (titleAccent) in gold */
+export interface SplitTitle {
   titleTop: string;
   titleAccent: string;
-  titleBottom: string;
+}
+
+/** Centred section intro: icon and label between two gold lines, title, one line of text */
+export interface SectionIntro extends SplitTitle {
+  id: string;
+  /** icon in front of the label (a name from components/ui/Icon.tsx) */
+  icon: string;
+  label: string;
   description: string;
+}
+
+export interface HeroSocialLink extends SocialLink {
+  /** colour (or gradient) of the square in the side rail */
+  background: string;
+}
+
+export interface HeroData extends SplitTitle {
+  id: string;
+  titleBottom: string;
+  /** the paragraph, one entry per line of the design */
+  descriptionLines: string[];
   image: string;
+  imageWidth: number;
+  imageHeight: number;
+  /** the same photo cropped around the student, for phones and tablets */
+  mobileImage: string;
+  mobileImageWidth: number;
+  mobileImageHeight: number;
   imageAlt: string;
   primaryButton: ButtonData;
   secondaryButton: ButtonData;
-  socialLinks: Omit<SocialLink, "url">[];
-}
-
-export interface IntroData {
-  id: string;
-  admissionLabel: string;
-  admissionText: string;
-  titleTop: string;
-  titleAccent: string;
-  description: string;
+  socialLabel: string;
+  socialLinks: HeroSocialLink[];
 }
 
 export interface RecognitionItem {
   id: string;
-  type: string;
-  title: string;
-  subtitle: string;
-  footnote?: string;
+  image: string;
+  imageAlt: string;
+  width: number;
+  height: number;
 }
 
-export interface RecognitionData {
-  title: string;
-  titleAccent: string;
-  items: RecognitionItem[];
-}
-
-export interface SectionHeadingData {
+export interface AboutData extends SplitTitle {
   id: string;
-  eyebrow: string;
-  titleTop: string;
-  titleAccent: string;
-  description?: string;
+  admissionIcon: string;
+  admissionLabel: string;
+  admissionText: string;
+  admissionUrl: string;
+  descriptionLines: string[];
+  recognitionsTitleTop: string;
+  recognitionsTitleAccent: string;
+  recognitions: RecognitionItem[];
 }
 
-export interface CoursesData extends SectionHeadingData {
-  items: {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-  }[];
+export interface CourseItem {
+  id: string;
+  title: string;
+  /** one entry per line of the card */
+  descriptionLines: string[];
+  /** the course's name in the contact form's list */
+  formName: string;
+  image: string;
+  imageAlt: string;
+  url: string;
 }
 
-export interface ImageSectionData extends SectionHeadingData {
+export interface CoursesData extends SectionIntro {
+  items: CourseItem[];
+}
+
+export interface WhyData extends SplitTitle {
+  id: string;
+  label: string;
+  descriptionLines: string[];
   image: string;
   imageAlt: string;
 }
 
-export interface FacultyData extends SectionHeadingData {
-  items: {
-    id: string;
+export interface FacultyItem {
+  id: string;
+  name: string;
+  role: string;
+  /** one entry per line of the card */
+  focusLines: string[];
+  image: string;
+  imageAlt: string;
+}
+
+export interface FacultyData extends SectionIntro {
+  previousLabel: string;
+  nextLabel: string;
+  items: FacultyItem[];
+}
+
+export interface EmployerItem {
+  id: string;
+  name: string;
+  image: string;
+  /** the logo's size in the 1920px design (its file is cut at that size) */
+  width: number;
+  height: number;
+}
+
+export interface HiringData extends SectionIntro {
+  employers: EmployerItem[];
+}
+
+export interface FaqItem {
+  id: string;
+  question: string;
+  /** one entry per line of the design */
+  answerLines: string[];
+}
+
+export interface FaqData extends SplitTitle {
+  id: string;
+  label: string;
+  /** words at the start of the second title line that stay navy ("You") */
+  titleAccentLead: string;
+  image: string;
+  imageAlt: string;
+  items: FaqItem[];
+}
+
+export interface ContactData extends SplitTitle {
+  id: string;
+  icon: string;
+  label: string;
+  descriptionLines: string[];
+}
+
+export interface ContactFormData {
+  fields: {
     name: string;
-    role: string;
-    focus: string;
-    image: string;
-  }[];
-}
-
-export interface HiringData extends SectionHeadingData {
-  employers: string[];
-}
-
-export interface FaqData extends SectionHeadingData {
-  image: string;
-  imageAlt: string;
-  items: {
-    id: string;
-    question: string;
-    answer: string;
-  }[];
-}
-
-export interface ContactData extends SectionHeadingData {
-  form: {
-    nameLabel: string;
-    emailLabel: string;
-    phoneLabel: string;
-    interestLabel: string;
-    messageLabel: string;
-    buttonLabel: string;
-    courseOptions: string[];
+    email: string;
+    phone: string;
+    course: string;
+    message: string;
   };
+  button: string;
+  sending: string;
+  successTitle: string;
+  success: string;
+  closeLabel: string;
 }
 
 interface Variants<T> {
@@ -154,24 +260,24 @@ interface Variants<T> {
 
 export interface EduRiseTemplateData {
   common: {
-    metadata: MetadataData;
-    announcement: AnnouncementData;
+    theme: ThemeData;
+    metadata: SiteMetadataData;
     company: CompanyData;
-    footer: FooterData;
+    Footer: FooterData;
   };
   categories: {
     Education: {
       sections: {
-        Header: Variants<HeaderData>;
-        Hero: Variants<HeroData>;
-        Intro: Variants<IntroData>;
-        Recognitions: Variants<RecognitionData>;
-        Courses: Variants<CoursesData>;
-        Why: Variants<ImageSectionData>;
-        Faculty: Variants<FacultyData>;
-        Hiring: Variants<HiringData>;
-        Faq: Variants<FaqData>;
-        Contact: Variants<ContactData>;
+        Header?: Variants<HeaderData>;
+        Hero?: Variants<HeroData>;
+        About?: Variants<AboutData>;
+        Courses?: Variants<CoursesData>;
+        Why?: Variants<WhyData>;
+        Faculty?: Variants<FacultyData>;
+        Hiring?: Variants<HiringData>;
+        Faq?: Variants<FaqData>;
+        Contact?: Variants<ContactData>;
+        ContactForm?: Variants<ContactFormData>;
       };
     };
   };

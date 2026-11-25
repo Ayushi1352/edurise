@@ -1,57 +1,81 @@
 {
   "common": {
-    "metadata": {
-      "title": "EduRise Learning Academy | Learn Today. Lead Tomorrow.",
-      "description": "Discover career-focused management programs, expert faculty, and industry-ready learning at EduRise Learning Academy.",
-      "lang": "en"
+    "theme": {
+      "fonts": {
+        "primary": "var(--font-figtree), Arial, sans-serif",
+        "heading": "var(--font-jakarta), Arial, sans-serif",
+        "ui": "var(--font-albert), Arial, sans-serif",
+        "display": "var(--font-montserrat), Arial, sans-serif",
+        "footer": "var(--font-noto-sans), Arial, sans-serif",
+        "serif": "var(--font-merriweather), Georgia, 'Times New Roman', serif"
+      }
     },
-    "announcement": {
-      "text": "Classes will be held online until Friday 8 May 2026. For more information, please",
-      "linkText": "see here.",
-      "linkUrl": "#contact"
+    "metadata": {
+      "title": "EduRise Learning Academy | Management Programs in New Delhi",
+      "description": "EduRise Learning Academy offers industry-focused PGDM, PGDM (IB), PGDM (FM), PGDM (BDA), Executive PGDM and certificate programs with expert faculty and strong placements.",
+      "icon": "/images/favicon.png",
+      "lang": "en"
     },
     "company": {
       "name": "EduRise",
-      "logo": "/edurise-logo.png",
+      "tagline": "Learning Academy",
+      "logo": "/images/edurise-logo.webp",
       "logoAlt": "EduRise Learning Academy",
+      "logoWidth": 2093,
+      "logoHeight": 516,
       "contactItems": [
         {
           "id": "email",
-          "icon": "✉",
+          "icon": "LuMail",
+          "label": "Email",
           "text": "info@eduriseacademy.com",
           "url": "mailto:info@eduriseacademy.com"
         },
         {
           "id": "phone",
-          "icon": "⌕",
+          "icon": "FaPhoneAlt",
+          "label": "Phone",
           "text": "+1 (555) 123-7890",
           "url": "tel:+15551237890"
         },
         {
           "id": "address",
-          "icon": "⌖",
+          "icon": "FaMapMarkerAlt",
+          "label": "Address",
           "text": "1234, Education Lane, New York, NY 10001, USA",
-          "url": ""
+          "url": "https://www.google.com/maps/search/?api=1&query=1234+Education+Lane+New+York+NY+10001+USA"
         }
       ]
     },
-    "footer": {
-      "description": "Empowering students with quality education, industry exposure, and career-ready skills for a brighter and successful future.",
-      "copyrightText": "© 2026 EduRise Learning Academy. All Rights Reserved.",
-      "links": [
-        { "id": "home", "label": "Home", "url": "#top" },
-        { "id": "about", "label": "About Us", "url": "#about" },
-        { "id": "courses", "label": "Our Courses", "url": "#courses" },
-        { "id": "why", "label": "Why Choose Us", "url": "#why-edurise" },
-        { "id": "faqs", "label": "FAQs", "url": "#faqs" },
-        { "id": "contact", "label": "Contact Us", "url": "#contact" }
+    "Footer": {
+      "backgroundImage": "/images/footer-library.webp",
+      "descriptionLines": [
+        "Empowering students with quality education,",
+        "industry exposure, and career-ready skills for a",
+        "brighter and successful future."
       ],
+      "linksLabel": "Footer navigation",
+      "links": [
+        { "id": "home", "label": "Home", "url": "#home" },
+        { "id": "about-us", "label": "About Us", "url": "#about" },
+        { "id": "our-courses", "label": "Our Courses", "url": "#courses" },
+        { "id": "why-choose-us", "label": "Why Choose Us", "url": "#why-edurise" },
+        { "id": "our-faculty", "label": "Our Faculty", "url": "#faculty" },
+        { "id": "student-work", "label": "Student Work", "url": "#student-work" },
+        { "id": "faqs", "label": "FAQs", "url": "#faqs" },
+        { "id": "contact-us", "label": "Contact Us", "url": "#contact" }
+      ],
+      "contactsTitle": "Contact Info",
+      "contactIds": ["email", "phone", "address"],
+      "socialTitle": "Follow Us:",
+      "socialLabel": "Follow EduRise",
       "socialLinks": [
-        { "id": "facebook", "label": "Facebook", "text": "f", "url": "#top" },
-        { "id": "instagram", "label": "Instagram", "text": "◎", "url": "#top" },
-        { "id": "x", "label": "X", "text": "𝕏", "url": "#top" },
-        { "id": "youtube", "label": "YouTube", "text": "▶", "url": "#top" }
-      ]
+        { "id": "facebook", "icon": "FaFacebookF", "label": "Facebook", "url": "https://www.facebook.com/" },
+        { "id": "instagram", "icon": "FaInstagram", "label": "Instagram", "url": "https://www.instagram.com/" },
+        { "id": "x", "icon": "FaXTwitter", "label": "X", "url": "https://x.com/" },
+        { "id": "youtube", "icon": "FaYoutube", "label": "YouTube", "url": "https://www.youtube.com/" }
+      ],
+      "copyrightText": "© {year} EduRise Learning Academy. All Rights Reserved."
     }
   },
   "categories": {
@@ -60,17 +84,29 @@
         "Header": {
           "variants": {
             "EduRiseHeader1": {
-              "homeLabel": "Home",
-              "contactButton": { "id": "contact", "label": "Contact Us", "url": "#contact" },
+              "announcement": {
+                "icon": "FaGraduationCap",
+                "text": "Classes will be held online until Friday 8 May 2026. For more information, please",
+                "linkText": "see here",
+                "linkUrl": "#contact"
+              },
+              "logoUrl": "/",
+              "homeLabel": "EduRise Learning Academy — back to top",
               "navLinks": [
-                { "id": "home", "label": "Home", "url": "#top" },
-                { "id": "about", "label": "About Us", "url": "#about" },
-                { "id": "courses", "label": "Our Courses", "url": "#courses" },
-                { "id": "why", "label": "Why Choose Us", "url": "#why-edurise" },
-                { "id": "faculty", "label": "Our Faculty", "url": "#faculty" },
+                { "id": "home", "label": "Home", "url": "#home" },
+                { "id": "about-us", "label": "About Us", "url": "#about" },
+                { "id": "our-courses", "label": "Our Courses", "url": "#courses" },
+                { "id": "why-choose-us", "label": "Why Choose Us", "url": "#why-edurise" },
+                { "id": "our-faculty", "label": "Our Faculty", "url": "#faculty" },
                 { "id": "student-work", "label": "Student Work", "url": "#student-work" },
                 { "id": "faqs", "label": "FAQs", "url": "#faqs" }
-              ]
+              ],
+              "buttonText": "Contact Us",
+              "buttonUrl": "#contact",
+              "mainNavLabel": "Main navigation",
+              "mobileNavLabel": "Mobile navigation",
+              "openMenuLabel": "Open menu",
+              "closeMenuLabel": "Close menu"
             }
           }
         },
@@ -78,45 +114,55 @@
           "variants": {
             "EduRiseHero1": {
               "id": "home",
-              "kicker": "Learn today. Lead tomorrow.",
               "titleTop": "Welcome To",
               "titleAccent": "EduRise",
               "titleBottom": "Learning Academy",
-              "description": "We want every student and study partner to feel that they are part of a common good and cohesive team. We help our teams form stronger relationships.",
-              "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2200&q=90",
-              "imageAlt": "University students walking across campus",
+              "descriptionLines": [
+                "We want every student and study partner to feel that they are part of a common",
+                "good and cohesive team. We help our teams form stronger relationships."
+              ],
+              "image": "/images/hero-student.webp",
+              "imageWidth": 1920,
+              "imageHeight": 743,
+              "mobileImage": "/images/hero-student-mobile.webp",
+              "mobileImageWidth": 1024,
+              "mobileImageHeight": 921,
+              "imageAlt": "Smiling student in a yellow sweater holding books on the EduRise campus",
               "primaryButton": { "label": "Our Courses", "url": "#courses" },
               "secondaryButton": { "label": "Contact Us", "url": "#contact" },
+              "socialLabel": "Follow EduRise",
               "socialLinks": [
-                { "id": "facebook", "label": "Facebook", "text": "f" },
-                { "id": "linkedin", "label": "LinkedIn", "text": "in" },
-                { "id": "instagram", "label": "Instagram", "text": "◎" },
-                { "id": "youtube", "label": "YouTube", "text": "▶" }
+                { "id": "facebook", "icon": "FaFacebookF", "label": "Facebook", "url": "https://www.facebook.com/", "background": "var(--color-facebook)" },
+                { "id": "linkedin", "icon": "FaLinkedinIn", "label": "LinkedIn", "url": "https://www.linkedin.com/", "background": "var(--color-linkedin)" },
+                { "id": "instagram", "icon": "FaInstagram", "label": "Instagram", "url": "https://www.instagram.com/", "background": "linear-gradient(45deg, #f9a12e 0%, #e8336c 45%, #a12ec2 100%)" },
+                { "id": "x", "icon": "FaXTwitter", "label": "X", "url": "https://x.com/", "background": "var(--color-x)" },
+                { "id": "youtube", "icon": "FaYoutube", "label": "YouTube", "url": "https://www.youtube.com/", "background": "var(--color-youtube)" }
               ]
             }
           }
         },
-        "Intro": {
+        "About": {
           "variants": {
-            "EduRiseIntro1": {
+            "EduRiseAbout1": {
               "id": "about",
-              "admissionLabel": "Admissions-2026 :",
+              "admissionIcon": "FaGraduationCap",
+              "admissionLabel": "Admissions–2026 :",
               "admissionText": "PGDM, PGDM(IB), PGDM(FM) & PGDM(BDA) (Batch 2026–28)",
+              "admissionUrl": "#contact",
               "titleTop": "Welcome to",
               "titleAccent": "EduRise Learning Academy",
-              "description": "EduRise Learning Academy (ERLA), established in 2010, is a premier business school in India known for its excellence in management education, research, and industry engagement. Located in New Delhi, ERLA offers a dynamic and career-oriented learning environment, fostering innovation, leadership, and global perspectives. With a focus on academic rigor, corporate exposure, and holistic development, the institute prepares future-ready professionals to make a meaningful impact in the business world."
-            }
-          }
-        },
-        "Recognitions": {
-          "variants": {
-            "EduRiseRecognitions1": {
-              "title": "Recognitions",
-              "titleAccent": "& Approvals",
-              "items": [
-                { "id": "saqs", "type": "accreditation", "title": "SAQS", "subtitle": "ACCREDITED" },
-                { "id": "great-place", "type": "great-place", "title": "Great Place To Work.", "subtitle": "Certified" },
-                { "id": "aacsb", "type": "aacsb", "title": "AACSB", "subtitle": "Business Education Alliance", "footnote": "Member" }
+              "descriptionLines": [
+                "EduRise Learning Academy (ERLA), established in 2010, is a premier business school in India known for its excellence in management",
+                "education, research, and industry engagement. Located in New Delhi, ERLA offers a dynamic and career-oriented learning environment, fostering",
+                "innovation, leadership, and global perspectives. With a focus on academic rigor, corporate exposure, and holistic development, the institute",
+                "prepares future-ready professionals to make a meaningful impact in the business world."
+              ],
+              "recognitionsTitleTop": "Recognitions &",
+              "recognitionsTitleAccent": "Approvals",
+              "recognitions": [
+                { "id": "saqs", "image": "/images/recognition-saqs.webp", "imageAlt": "SAQS Accredited", "width": 276, "height": 180 },
+                { "id": "great-place-to-work", "image": "/images/recognition-great-place-to-work.webp", "imageAlt": "Great Place To Work Certified", "width": 144, "height": 211 },
+                { "id": "aacsb", "image": "/images/recognition-aacsb.webp", "imageAlt": "AACSB Business Education Alliance Member", "width": 359, "height": 154 }
               ]
             }
           }
@@ -125,17 +171,66 @@
           "variants": {
             "EduRiseCourses1": {
               "id": "courses",
-              "eyebrow": "Our Courses",
+              "icon": "FaGraduationCap",
+              "label": "Our Courses",
               "titleTop": "Explore Our",
               "titleAccent": "Academic Programs",
               "description": "Industry-focused management programs designed to build leadership, analytical and strategic skills for a successful career.",
               "items": [
-                { "id": "pgdm", "title": "PGDM", "description": "Post Graduate Diploma in Management", "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" },
-                { "id": "pgdm-ib", "title": "PGDM (IB)", "description": "PGDM in International Business", "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=85" },
-                { "id": "pgdm-fm", "title": "PGDM (FM)", "description": "PGDM in Financial Management", "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=700&q=85" },
-                { "id": "pgdm-bda", "title": "PGDM (BDA)", "description": "PGDM in Business Data Analytics", "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=85" },
-                { "id": "executive-pgdm", "title": "Executive PGDM", "description": "For Working Professionals", "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" },
-                { "id": "certificate-programs", "title": "Certificate Programs", "description": "Specialized Short-Term Management Courses", "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85" }
+                {
+                  "id": "pgdm",
+                  "title": "PGDM",
+                  "descriptionLines": ["Post Graduate Diploma in Management"],
+                  "formName": "PGDM (Post Graduate Diploma in Management)",
+                  "image": "/images/course-pgdm.webp",
+                  "imageAlt": "MBA students in blazers attending a lecture",
+                  "url": "#contact"
+                },
+                {
+                  "id": "pgdm-ib",
+                  "title": "PGDM (IB)",
+                  "descriptionLines": ["PGDM in International", "Business"],
+                  "formName": "PGDM (International Business)",
+                  "image": "/images/course-pgdm-ib.webp",
+                  "imageAlt": "Student with glasses holding books on campus",
+                  "url": "#contact"
+                },
+                {
+                  "id": "pgdm-fm",
+                  "title": "PGDM (FM)",
+                  "descriptionLines": ["PGDM in Financial", "Management"],
+                  "formName": "PGDM (Financial Management)",
+                  "image": "/images/course-pgdm-fm.webp",
+                  "imageAlt": "Student holding a laptop in a bright campus building",
+                  "url": "#contact"
+                },
+                {
+                  "id": "pgdm-bda",
+                  "title": "PGDM (BDA)",
+                  "descriptionLines": ["PGDM in Business", "Data Analytics"],
+                  "formName": "PGDM (Business Data Analytics)",
+                  "image": "/images/course-pgdm-bda.webp",
+                  "imageAlt": "Smiling student with a backpack outside a campus building",
+                  "url": "#contact"
+                },
+                {
+                  "id": "executive-pgdm",
+                  "title": "Executive PGDM",
+                  "descriptionLines": ["For Working", "Professionals"],
+                  "formName": "Executive PGDM",
+                  "image": "/images/course-executive-pgdm.webp",
+                  "imageAlt": "Three professionals working together on a laptop",
+                  "url": "#contact"
+                },
+                {
+                  "id": "certificate-programs",
+                  "title": "Certificate Programs",
+                  "descriptionLines": ["Specialized Short-Term", "Management Courses"],
+                  "formName": "Certificate Programs",
+                  "image": "/images/course-certificate.webp",
+                  "imageAlt": "Graduation cap resting on a stack of books",
+                  "url": "#contact"
+                }
               ]
             }
           }
@@ -144,12 +239,17 @@
           "variants": {
             "EduRiseWhy1": {
               "id": "why-edurise",
-              "eyebrow": "Why Choose EduRise",
+              "label": "Why Choose EduRise",
               "titleTop": "The Right Choice for",
               "titleAccent": "Your Future",
-              "description": "At EduRise, we combine academic excellence, industry exposure, and expert mentorship to help students build strong careers, develop leadership skills, and become future-ready professionals.",
-              "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1100&q=85",
-              "imageAlt": "Students learning together on campus"
+              "descriptionLines": [
+                "At EduRise, we combine academic excellence, industry",
+                "exposure, and expert mentorship to help students build",
+                "strong careers, develop leadership skills, and become",
+                "future-ready professionals."
+              ],
+              "image": "/images/why-students.webp",
+              "imageAlt": "Two smiling students with books, one giving a thumbs up, outside a campus building"
             }
           }
         },
@@ -157,15 +257,46 @@
           "variants": {
             "EduRiseFaculty1": {
               "id": "faculty",
-              "eyebrow": "Our Faculty",
-              "titleTop": "Learn from Industry Experts",
-              "titleAccent": "& Academic Leaders",
+              "icon": "FaGraduationCap",
+              "label": "Our Faculty",
+              "titleTop": "Learn from Industry Experts &",
+              "titleAccent": "Academic Leaders",
               "description": "Our distinguished faculty bring a perfect blend of academic excellence, industry experience, and real-world insights to the classroom.",
+              "previousLabel": "Previous faculty member",
+              "nextLabel": "Next faculty member",
               "items": [
-                { "id": "arjun-sharma", "name": "Dr. Arjun Sharma", "role": "Professor & Program Chair", "focus": "Business Strategy & Business Analytics", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=85" },
-                { "id": "neha-gupta", "name": "Prof. Neha Gupta", "role": "Associate Professor", "focus": "Specialization: Finance & Investment Management", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=85" },
-                { "id": "rohan-mehta", "name": "Dr. Rohan Mehta", "role": "Associate Professor", "focus": "Specialization: Marketing & Digital Business", "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=85" },
-                { "id": "isha-verma", "name": "Prof. Isha Verma", "role": "Assistant Professor", "focus": "Specialization: Human Resource & Organizational Behaviour", "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=85" }
+                {
+                  "id": "amit-sharma",
+                  "name": "Dr. Amit Sharma",
+                  "role": "Professor & Program Chair",
+                  "focusLines": ["Specialization: Strategy &", "Business Analytics"],
+                  "image": "/images/faculty-amit-sharma-v2.webp",
+                  "imageAlt": "Portrait of Dr. Amit Sharma"
+                },
+                {
+                  "id": "neha-gupta",
+                  "name": "Prof. Neha Gupta",
+                  "role": "Associate Professor",
+                  "focusLines": ["Specialization: Finance &", "Investment Management"],
+                  "image": "/images/faculty-neha-gupta-v2.webp",
+                  "imageAlt": "Portrait of Prof. Neha Gupta"
+                },
+                {
+                  "id": "rohan-mehta",
+                  "name": "Dr. Rohan Mehta",
+                  "role": "Associate Professor",
+                  "focusLines": ["Specialization: Marketing &", "Digital Business"],
+                  "image": "/images/faculty-rohan-mehta-v2.webp",
+                  "imageAlt": "Portrait of Dr. Rohan Mehta"
+                },
+                {
+                  "id": "isha-verma",
+                  "name": "Prof. Isha Verma",
+                  "role": "Assistant Professor",
+                  "focusLines": ["Specialization: Human Resource", "& Organisational Behaviour"],
+                  "image": "/images/faculty-isha-verma-v2.webp",
+                  "imageAlt": "Portrait of Prof. Isha Verma"
+                }
               ]
             }
           }
@@ -174,15 +305,62 @@
           "variants": {
             "EduRiseHiring1": {
               "id": "student-work",
-              "eyebrow": "Hiring",
+              "icon": "FaBriefcase",
+              "label": "Hiring",
               "titleTop": "Where Our",
               "titleAccent": "Students Work?",
-              "description": "Our students are hired by leading global and national organizations across diverse industries.",
+              "description": "Our students are hired by leading global and national organizations across diverse Industries.",
               "employers": [
-                "Tech Mahindra", "Barclays", "BlackRock", "Gartner", "accenture", "airtel", "PEPSICO",
-                "Deloitte", "HDFC Bank", "BCG", "TATA", "EY", "Microsoft", "IBM",
-                "Cognizant", "Amazon", "Infosys", "BMW", "Wipro", "ADANI",
-                "Capgemini", "HCL", "KPMG", "P&G", "Nestlé", "VISA", "PwC", "NOVARTIS"
+                { "id": "tech-mahindra", "name": "Tech Mahindra", "image": "/images/employers/tech-mahindra.webp", "width": 141, "height": 43 },
+                { "id": "bank-of-america", "name": "Bank of America", "image": "/images/employers/bank-of-america.webp", "width": 112, "height": 60 },
+                { "id": "blackrock", "name": "BlackRock", "image": "/images/employers/blackrock.webp", "width": 141, "height": 44 },
+                { "id": "gartner", "name": "Gartner", "image": "/images/employers/gartner.webp", "width": 137, "height": 32 },
+                { "id": "godrej-properties", "name": "Godrej Properties", "image": "/images/employers/godrej-properties.webp", "width": 150, "height": 32 },
+                { "id": "asian-paints", "name": "Asian Paints", "image": "/images/employers/asian-paints.webp", "width": 91, "height": 68 },
+                { "id": "pepsico", "name": "PepsiCo", "image": "/images/employers/pepsico.webp", "width": 143, "height": 39 },
+                { "id": "aditya-birla-group", "name": "Aditya Birla Group", "image": "/images/employers/aditya-birla-group.webp", "width": 122, "height": 65 },
+                { "id": "cognizant", "name": "Cognizant", "image": "/images/employers/cognizant.webp", "width": 146, "height": 27 },
+                { "id": "jpmorgan-chase-and-co", "name": "JPMorgan Chase & Co.", "image": "/images/employers/jpmorgan-chase-and-co.webp", "width": 154, "height": 13 },
+                { "id": "hsbc", "name": "HSBC", "image": "/images/employers/hsbc.webp", "width": 132, "height": 35 },
+                { "id": "bcg", "name": "BCG", "image": "/images/employers/bcg.webp", "width": 139, "height": 52 },
+                { "id": "honasa", "name": "Honasa", "image": "/images/employers/honasa.webp", "width": 87, "height": 66 },
+                { "id": "ey", "name": "EY", "image": "/images/employers/ey.webp", "width": 67, "height": 63 },
+                { "id": "icici-bank", "name": "ICICI Bank", "image": "/images/employers/icici-bank.webp", "width": 135, "height": 28 },
+                { "id": "airtel", "name": "Airtel", "image": "/images/employers/airtel.webp", "width": 135, "height": 45 },
+                { "id": "amazon", "name": "Amazon", "image": "/images/employers/amazon.webp", "width": 131, "height": 40 },
+                { "id": "bain-and-company", "name": "Bain & Company", "image": "/images/employers/bain-and-company.webp", "width": 140, "height": 42 },
+                { "id": "marsh-mclennan", "name": "Marsh McLennan", "image": "/images/employers/marsh-mclennan.webp", "width": 140, "height": 48 },
+                { "id": "jk-tyre", "name": "JK Tyre", "image": "/images/employers/jk-tyre.webp", "width": 142, "height": 66 },
+                { "id": "balmer-lawrie-and-co-ltd", "name": "Balmer Lawrie & Co. Ltd.", "image": "/images/employers/balmer-lawrie-and-co-ltd.webp", "width": 125, "height": 70 },
+                { "id": "vi", "name": "Vi", "image": "/images/employers/vi.webp", "width": 67, "height": 56 },
+                { "id": "ibm", "name": "IBM", "image": "/images/employers/ibm.webp", "width": 124, "height": 49 },
+                { "id": "bmw", "name": "BMW", "image": "/images/employers/bmw.webp", "width": 64, "height": 63 },
+                { "id": "microsoft", "name": "Microsoft", "image": "/images/employers/microsoft.webp", "width": 145, "height": 32 },
+                { "id": "darashaw", "name": "Darashaw", "image": "/images/employers/darashaw.webp", "width": 134, "height": 32 },
+                { "id": "american-express", "name": "American Express", "image": "/images/employers/american-express.webp", "width": 140, "height": 58 },
+                { "id": "oxane-partners", "name": "Oxane Partners", "image": "/images/employers/oxane-partners.webp", "width": 75, "height": 70 },
+                { "id": "makemytrip", "name": "MakeMyTrip", "image": "/images/employers/makemytrip.webp", "width": 141, "height": 45 },
+                { "id": "adani", "name": "Adani", "image": "/images/employers/adani.webp", "width": 135, "height": 43 },
+                { "id": "accenture", "name": "Accenture", "image": "/images/employers/accenture.webp", "width": 137, "height": 36 },
+                { "id": "arcesium", "name": "Arcesium", "image": "/images/employers/arcesium.webp", "width": 127, "height": 27 },
+                { "id": "bacardi", "name": "Bacardi", "image": "/images/employers/bacardi.webp", "width": 61, "height": 60 },
+                { "id": "mercedes-benz", "name": "Mercedes-Benz", "image": "/images/employers/mercedes-benz.webp", "width": 57, "height": 56 },
+                { "id": "capgemini", "name": "Capgemini", "image": "/images/employers/capgemini.webp", "width": 145, "height": 34 },
+                { "id": "deloitte", "name": "Deloitte", "image": "/images/employers/deloitte.webp", "width": 127, "height": 25 },
+                { "id": "hcl", "name": "HCL", "image": "/images/employers/hcl.webp", "width": 119, "height": 22 },
+                { "id": "apple", "name": "Apple", "image": "/images/employers/apple.webp", "width": 46, "height": 55 },
+                { "id": "mckinsey-and-company", "name": "McKinsey & Company", "image": "/images/employers/mckinsey-and-company.webp", "width": 122, "height": 50 },
+                { "id": "genpact", "name": "Genpact", "image": "/images/employers/genpact.webp", "width": 74, "height": 66 },
+                { "id": "nestle", "name": "Nestlé", "image": "/images/employers/nestle.webp", "width": 139, "height": 36 },
+                { "id": "itc-limited", "name": "ITC Limited", "image": "/images/employers/itc-limited.webp", "width": 73, "height": 69 },
+                { "id": "lenskart", "name": "Lenskart", "image": "/images/employers/lenskart.webp", "width": 89, "height": 59 },
+                { "id": "novartis", "name": "Novartis", "image": "/images/employers/novartis.webp", "width": 142, "height": 27 },
+                { "id": "pandg", "name": "P&G", "image": "/images/employers/pandg.webp", "width": 69, "height": 67 },
+                { "id": "pwc", "name": "PwC", "image": "/images/employers/pwc.webp", "width": 110, "height": 61 },
+                { "id": "schneider-electric", "name": "Schneider Electric", "image": "/images/employers/schneider-electric.webp", "width": 130, "height": 41 },
+                { "id": "vikram-solar", "name": "Vikram Solar", "image": "/images/employers/vikram-solar.webp", "width": 140, "height": 60 },
+                { "id": "visa", "name": "Visa", "image": "/images/employers/visa.webp", "width": 131, "height": 43 },
+                { "id": "wipro", "name": "Wipro", "image": "/images/employers/wipro.webp", "width": 88, "height": 67 }
               ]
             }
           }
@@ -191,16 +369,49 @@
           "variants": {
             "EduRiseFaq1": {
               "id": "faqs",
-              "eyebrow": "FAQs",
-              "titleTop": "Answers That Keep You",
+              "label": "FAQs",
+              "titleTop": "Answers That Keep",
+              "titleAccentLead": "You",
               "titleAccent": "Moving Forward.",
-              "image": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1000&q=85",
-              "imageAlt": "Students studying together on campus",
+              "image": "/images/faq-students.webp",
+              "imageAlt": "Three students studying together on the grass in front of a campus building",
               "items": [
-                { "id": "apply", "question": "How do I apply to EduRise Learning Academy?", "answer": "You can apply online through our official website by filling out the application form and submitting the required documents. Our admissions team will guide you through the next steps." },
-                { "id": "requirements", "question": "What are the admission requirements?", "answer": "Applicants should hold a recognized bachelor’s degree. Program-specific eligibility and entrance requirements are shared by our admissions team." },
-                { "id": "international", "question": "Can I apply as an international student?", "answer": "Yes. International applicants are welcome to apply. Contact our admissions team for guidance on documents and application timelines." },
-                { "id": "transfer", "question": "How do I transfer from another institution?", "answer": "Please contact the admissions office with your academic transcripts. Our team will review your previous coursework and explain the transfer process." }
+                {
+                  "id": "apply",
+                  "question": "How do I apply to EduRise Learning Academy?",
+                  "answerLines": [
+                    "You can apply online through our official website by filling out the",
+                    "application form and submitting the required documents. Our admissions",
+                    "team will guide you through the next steps."
+                  ]
+                },
+                {
+                  "id": "requirements",
+                  "question": "What are the admission requirements?",
+                  "answerLines": [
+                    "Applicants need a recognised bachelor’s degree with at least 50% marks",
+                    "and a valid score in CAT, XAT, MAT, CMAT or GMAT. Shortlisted candidates",
+                    "are invited for a group discussion and a personal interview."
+                  ]
+                },
+                {
+                  "id": "international",
+                  "question": "Can I apply as an international student?",
+                  "answerLines": [
+                    "Yes. International students are welcome to apply with their academic",
+                    "transcripts, a valid passport and proof of English proficiency. Our team",
+                    "will help you with the visa and admission process."
+                  ]
+                },
+                {
+                  "id": "transfer",
+                  "question": "How do I transfer from another institution?",
+                  "answerLines": [
+                    "Send your transcripts and course details to our admissions team. We",
+                    "review your previous credits and let you know which of them can be",
+                    "carried over to your EduRise program."
+                  ]
+                }
               ]
             }
           }
@@ -209,26 +420,32 @@
           "variants": {
             "EduRiseContact1": {
               "id": "contact",
-              "eyebrow": "Contact Us",
+              "icon": "LuMail",
+              "label": "Contact Us",
               "titleTop": "Get in Touch",
               "titleAccent": "With Us",
-              "description": "Have questions about our courses, admissions, or career opportunities? Send us a message and our team will get back to you shortly.",
-              "form": {
-                "nameLabel": "Your Full Name*",
-                "emailLabel": "Your Email Address*",
-                "phoneLabel": "Your Phone Number*",
-                "interestLabel": "Select Course Interest*",
-                "messageLabel": "Your Message*",
-                "buttonLabel": "Send Message",
-                "courseOptions": [
-                  "PGDM",
-                  "PGDM (International Business)",
-                  "PGDM (Financial Management)",
-                  "PGDM (Business Data Analytics)",
-                  "Executive PGDM",
-                  "Certificate Programs"
-                ]
-              }
+              "descriptionLines": [
+                "Have questions about our courses, admissions, or career opportunities?",
+                "Send us a message and our team will get back to you shortly."
+              ]
+            }
+          }
+        },
+        "ContactForm": {
+          "variants": {
+            "EduRiseContactForm1": {
+              "fields": {
+                "name": "Your Full Name*",
+                "email": "Your Email Address*",
+                "phone": "Your Phone Number*",
+                "course": "Select Course Interest*",
+                "message": "Your Message*"
+              },
+              "button": "Send Message",
+              "sending": "Sending…",
+              "successTitle": "Thank you, {name}!",
+              "success": "Your message has been received. Our admissions team will get back to you shortly.",
+              "closeLabel": "Close message"
             }
           }
         }
