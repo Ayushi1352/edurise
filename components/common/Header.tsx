@@ -19,7 +19,14 @@ const linkClass = (current: boolean) =>
   From 1024px up the sizes come from the 1920px design (1 design pixel = 0.0625rem).
 */
 export const Header = ({ data, company }: { data?: HeaderData; company: CompanyData }) => {
-  const [ids] = useState(() => data?.navLinks.map((link) => sectionId(link.url)) ?? []);
+  const [ids] = useState(() => {
+    const list = data?.navLinks.map((link) => sectionId(link.url)) ?? [];
+    if (data?.buttonUrl?.startsWith("#")) {
+      const btnId = sectionId(data.buttonUrl);
+      if (!list.includes(btnId)) list.push(btnId);
+    }
+    return list;
+  });
   const { active, scrolled } = useActiveSection(ids);
   const [open, setOpen] = useState(false);
 

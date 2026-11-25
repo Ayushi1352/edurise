@@ -17,11 +17,21 @@ export const useActiveSection = (ids: string[]) => {
     let frame = 0;
     const update = () => {
       frame = 0;
-      const middle = window.innerHeight * 0.5;
-      let current = ids[0];
+      const middle = window.innerHeight * 0.45;
+      let current = "";
       for (const id of ids) {
         const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= middle) current = id;
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= middle && rect.bottom > middle) {
+            current = id;
+            break;
+          }
+        }
+      }
+      // If visitor is near the top of the page, default to first section
+      if (!current && window.scrollY < 120) {
+        current = ids[0];
       }
       setActive(current);
       setScrolled(window.scrollY > 8);

@@ -12,14 +12,15 @@ const button =
 
 /*
   From 1024px up the hero is the design's 745px tall picture: the student on the right and the navy shade on the
-  left with the title, the gold line, two lines of text and the two buttons (1 design pixel = 0.0625rem).
+  left with the title, the gold line, two lines of text and the two buttons (1 design pixel = 0.0625rem). The desktop
+  image is cropped to its right half to hide the extra portrait baked into the source artwork.
   Phones and tablets show the text on navy first and the photo of the student under it.
   One <picture> serves both: each screen downloads only its own photo.
 */
 export const HeroSection = ({ data }: { data?: HeroData }) => {
   if (!data) return null;
 
-  const common = { alt: data.imageAlt, sizes: "100vw", quality: 90 };
+  const common = { alt: data.imageAlt, sizes: "(min-width: 1024px) 50vw, 100vw", quality: 90 };
   const {
     props: { srcSet: desktopSet },
   } = getImageProps({ ...common, src: data.image, width: data.imageWidth, height: data.imageHeight });
@@ -73,13 +74,13 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
       </div>
 
       {/* clean photo with pure CSS gradients: fades from deep navy on desktop left & mobile top */}
-      <div className="relative aspect-[1024/921] max-h-[36rem] w-full overflow-hidden lg:absolute lg:inset-0 lg:aspect-auto lg:max-h-none">
+      <div className="relative aspect-[16/9] max-h-[36rem] w-full overflow-hidden lg:absolute lg:inset-0 lg:aspect-auto lg:max-h-none">
         <picture>
           <source media="(min-width: 1024px)" srcSet={desktopSet} />
-          <img {...imageProps} srcSet={mobileSet} alt={data.imageAlt} className="absolute inset-0 h-full w-full object-cover object-top lg:object-right" />
+          <img {...imageProps} srcSet={mobileSet} alt={data.imageAlt} className="absolute inset-0 h-full w-full object-cover object-[center_20%] lg:object-[82%_20%]" />
         </picture>
         <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-[var(--color-navy-deep)] to-transparent lg:hidden" />
-        <span aria-hidden="true" className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-[var(--color-navy-deep)] from-[38%] via-[var(--color-navy-deep)]/90 via-[48%] to-transparent to-[65%] lg:block" />
+        <span aria-hidden="true" className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-[var(--color-navy-deep)] from-[35%] via-[var(--color-navy-deep)]/90 via-[48%] to-transparent to-[65%] lg:block" />
       </div>
     </section>
   );

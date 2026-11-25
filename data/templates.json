@@ -220,10 +220,10 @@
               ],
               "image": "/images/hero-campus-v3.webp",
               "imageWidth": 1920,
-              "imageHeight": 743,
+              "imageHeight": 1080,
               "mobileImage": "/images/hero-campus-mobile-v3.webp",
               "mobileImageWidth": 1024,
-              "mobileImageHeight": 921,
+              "mobileImageHeight": 576,
               "imageAlt": "Smiling student in a yellow sweater holding books on the EduRise campus",
               "primaryButton": {
                 "label": "Our Courses",
