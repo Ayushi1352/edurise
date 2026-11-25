@@ -35,7 +35,7 @@ export const FacultySlider = ({ data }: { data: FacultyData }) => {
             {/* white panel with an arched top and a gold bottom edge (it sits over the bottom of the portrait) */}
             <div className="absolute inset-x-[2.9%] bottom-0 h-[37.5%] rounded-t-[50%_15%] border-b-[0.35rem] border-[var(--color-gold)] bg-[var(--color-white)] text-center shadow-[0_-0.5rem_1.5rem_-1rem_var(--color-shadow-strong)] lg:border-b-[0.5rem]">
               <span className="absolute left-1/2 top-0 grid size-[3.25rem] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[0.125rem] border-[var(--color-navy)] bg-[var(--color-white)] text-[var(--color-navy)] lg:size-[4.13rem]">
-                <Icon name="FaGraduationCap" className="size-6 lg:size-[2.2rem]" />
+                <Icon name={data.badgeIcon ?? "FaGraduationCap"} className="size-6 lg:size-[2.2rem]" />
               </span>
               <h3 className="mt-[13%] font-heading text-[1.3rem] font-bold leading-tight text-[var(--color-navy)] lg:mt-[2.6rem] lg:text-[1.8rem] lg:leading-[2.2rem]">{person.name}</h3>
               <p className="mt-0.5 font-heading text-[0.95rem] font-medium text-[var(--color-text)] lg:mt-[0.2rem] lg:text-[1.26rem] lg:leading-[1.9rem]">{person.role}</p>

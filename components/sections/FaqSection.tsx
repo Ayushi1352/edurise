@@ -9,7 +9,7 @@ export const FaqSection = ({ data }: { data?: FaqData }) => {
   if (!data) return null;
 
   return (
-    <section id={data.id} className={`relative bg-[var(--color-bg-soft)] ${sectionSpace} lg:pb-0 lg:pt-[10.63rem] ${scrollMargin} ${sidePadding}`}>
+    <section id={data.id} className={`relative bg-[var(--color-bg-soft)] ${sectionSpace} ${scrollMargin} ${sidePadding}`}>
       <div className="mx-auto grid max-w-[44rem] gap-10 lg:flex lg:max-w-none lg:items-start lg:gap-0 lg:pl-[7.88rem]">
         <div className="lg:w-[50.69rem] lg:shrink-0 lg:pt-[0.1rem]">
           <div data-reveal>
@@ -20,7 +20,7 @@ export const FaqSection = ({ data }: { data?: FaqData }) => {
               lineClass="h-[0.22rem] w-10 lg:h-[0.31rem] lg:w-[4.06rem]"
               gapClass="gap-3 lg:gap-[1.38rem]"
             />
-            <h2 className="mt-3 font-ui text-[length:min(2.3rem,calc((100vw-2rem)/10))] font-extrabold leading-[1.12] tracking-[-0.01em] text-[var(--color-navy)] sm:text-[3rem] lg:mt-[1.05rem] lg:text-[4.29rem] lg:leading-[4.88rem]">
+            <h2 className="mt-3 font-ui text-[clamp(1.25rem,4.4vw,1.75rem)] font-extrabold leading-[1.15] tracking-[-0.01em] text-[var(--color-navy)] sm:text-[clamp(1.75rem,3.2vw,2.4rem)] lg:mt-[1.05rem] lg:text-[4.29rem] lg:leading-[4.88rem]">
               <span className="block">{data.titleTop}</span>
               <span className="block">
                 {data.titleAccentLead} <span className="text-[var(--color-gold-text)]">{data.titleAccent}</span>

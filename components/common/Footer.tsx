@@ -23,12 +23,15 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
 
   return (
     <footer className="relative isolate overflow-hidden bg-[var(--color-footer-bg)] font-footer text-[var(--color-white)] lg:h-[51.25rem]">
-      <Image src={data.backgroundImage} alt="" fill quality={75} sizes="100vw" className="-z-10 object-cover" />
+      {/* clean high-resolution library photo */}
+      <Image src={data.backgroundImage} alt="" fill quality={90} sizes="100vw" className="-z-20 object-cover object-center" />
+      {/* deep, uniform navy overlay that matches the reference footer */}
+      <span aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[#00162f]/90" />
 
       <div className="px-5 pb-6 pt-12 sm:px-8 sm:pt-14 lg:flex lg:h-[42.94rem] lg:p-0">
         {/* logo, text and links */}
         <div className="lg:w-[50.31rem] lg:shrink-0 lg:pl-[7.88rem] lg:pt-[5.38rem]">
-          <a href="#home" aria-label={company.logoAlt} className="inline-block">
+          <a href={data.logoUrl ?? "#home"} aria-label={company.logoAlt} className="inline-block">
             <Image src={company.logo} alt={company.logoAlt} width={company.logoWidth} height={company.logoHeight} quality={90} sizes="(min-width: 1024px) 512px, 272px" className="h-auto w-[14rem] sm:w-[17rem] lg:w-[32rem]" />
           </a>
           <p className="mt-5 max-w-[28rem] text-[1rem] leading-[1.55] text-[var(--color-white)] sm:text-[1.05rem] lg:mt-[0.6rem] lg:max-w-none lg:text-[1.69rem] lg:leading-[2.31rem]">

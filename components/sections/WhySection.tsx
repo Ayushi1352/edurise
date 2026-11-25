@@ -12,7 +12,7 @@ export const WhySection = ({ data }: { data?: WhyData }) => {
   if (!data) return null;
 
   return (
-    <section id={data.id} className={`relative bg-[var(--color-bg-soft)] ${sectionSpace} lg:pb-0 lg:pt-[10rem] ${scrollMargin} ${sidePadding}`}>
+    <section id={data.id} className={`relative bg-[var(--color-bg-soft)] ${sectionSpace} ${scrollMargin} ${sidePadding}`}>
       <div className="mx-auto grid max-w-[40rem] gap-10 sm:gap-12 lg:flex lg:max-w-none lg:items-start lg:gap-0 lg:pl-[3.06rem]">
         <div data-reveal className="relative aspect-[854/730] w-full lg:w-[53.38rem] lg:shrink-0">
           <span aria-hidden="true" className="absolute inset-y-0 left-0 w-[83.7%] border-[0.85rem] border-[var(--color-navy-deep)] sm:border-[1.4rem] lg:border-[2.25rem]" />
@@ -29,7 +29,7 @@ export const WhySection = ({ data }: { data?: WhyData }) => {
             lineClass="h-[0.19rem] w-10 lg:h-[0.25rem] lg:w-[4.88rem]"
             gapClass="gap-3 lg:gap-[1.13rem]"
           />
-          <h2 className="mt-3 font-ui text-[length:min(2.4rem,calc((100vw-2rem)/10))] font-extrabold leading-[1.1] tracking-[-0.01em] text-[var(--color-navy)] sm:text-[3.2rem] lg:mt-[1.6rem] lg:text-[5.46rem] lg:leading-[6rem]">
+          <h2 className="mt-3 font-ui text-[clamp(1.25rem,4.4vw,1.75rem)] font-extrabold leading-[1.15] tracking-[-0.01em] text-[var(--color-navy)] sm:text-[clamp(1.75rem,3.2vw,2.4rem)] lg:mt-[1.6rem] lg:text-[5.46rem] lg:leading-[6rem]">
             <span className="block">{data.titleTop}</span>
             <span className="block text-[var(--color-gold-text)]">{data.titleAccent}</span>
           </h2>

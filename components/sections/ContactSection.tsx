@@ -15,7 +15,7 @@ export const ContactSection = ({ data, form, courseOptions }: Props) => {
   if (!data) return null;
 
   return (
-    <section id={data.id} className={`relative overflow-hidden bg-[var(--color-bg-soft)] ${sectionSpace} lg:pb-[4.31rem] lg:pt-[6.88rem] ${scrollMargin} ${sidePadding}`}>
+    <section id={data.id} className={`relative overflow-hidden bg-[var(--color-bg-soft)] ${sectionSpace} ${scrollMargin} ${sidePadding}`}>
       {/* the design's soft curves behind the card */}
       <span aria-hidden="true" className="pointer-events-none absolute -bottom-[45%] -left-[30%] h-[85%] w-[75%] rounded-[50%] bg-[var(--color-bg-contact)] lg:-bottom-[24rem] lg:-left-[38rem] lg:h-[46rem] lg:w-[82rem]" />
       <span aria-hidden="true" className="pointer-events-none absolute -right-[35%] top-[30%] h-[80%] w-[55%] rounded-[50%] bg-[var(--color-bg-contact)] lg:-right-[16rem] lg:top-[19rem] lg:h-[46rem] lg:w-[30rem]" />

@@ -9,14 +9,12 @@ import { scrollMargin, sectionSpace, sidePadding } from "@/components/ui/section
 const cardWidths = [395, 372, 394];
 const rem = (px: number) => `${px / 16}rem`;
 
-const smallTitle = "text-[length:min(1.6rem,calc((100vw-2rem)/14))] sm:text-[2rem] lg:leading-[3.6rem]";
-
 /** Admissions banner, the welcome text, then "Recognitions & Approvals" with the three logo cards (sizes from the 1920px design) */
 export const AboutSection = ({ data }: { data?: AboutData }) => {
   if (!data) return null;
 
   return (
-    <section id={data.id} className={`relative bg-[var(--color-bg-soft)] ${sectionSpace} lg:pb-0 lg:pt-[5.75rem] ${scrollMargin} ${sidePadding}`}>
+    <section id={data.id} className={`relative bg-[var(--color-bg-soft)] ${sectionSpace} ${scrollMargin} ${sidePadding}`}>
       {/* admissions banner */}
       <a
         data-reveal
@@ -32,8 +30,9 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
 
       {/* welcome text */}
       <div data-reveal className="mt-8 text-center sm:mt-10 lg:mt-[2.1rem]">
-        <h2 className={`${titleClass} ${smallTitle} lg:text-[3.24rem]`}>
-          {data.titleTop} <span className={accentClass}>{data.titleAccent}</span>
+        <h2 className={`${titleClass} text-[clamp(1.15rem,4vw,1.6rem)] sm:text-[clamp(1.55rem,2.6vw,2.1rem)] lg:text-[3.24rem] lg:leading-[3.6rem]`}>
+          <span className="block sm:inline">{data.titleTop} </span>
+          <span className={`block sm:inline ${accentClass}`}>{data.titleAccent}</span>
         </h2>
         <span aria-hidden="true" className="mx-auto mt-3 flex h-[0.2rem] w-40 lg:mt-[1.25rem] lg:h-[0.25rem] lg:w-[17.56rem]">
           <span className="w-[32%] rounded-l-full bg-[var(--color-navy)]" />
@@ -50,17 +49,17 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
       </div>
 
       {/* recognitions */}
-      <div data-reveal className="mt-10 flex items-center justify-center gap-4 sm:mt-12 lg:mt-[2.6rem] lg:gap-[2.6rem]">
-        <span aria-hidden="true" className="h-[0.125rem] w-10 shrink-0 bg-[var(--color-line)] sm:w-20 lg:h-[0.1875rem] lg:w-[11.5rem]" />
-        <h2 className={`whitespace-nowrap ${titleClass} ${smallTitle} lg:text-[3.07rem]`}>
+      <div data-reveal className="mt-10 flex items-center justify-center gap-3 sm:mt-12 sm:gap-4 lg:mt-[2.6rem] lg:gap-[2.6rem]">
+        <span aria-hidden="true" className="h-[0.125rem] w-8 shrink-0 bg-[var(--color-line)] sm:w-16 lg:h-[0.1875rem] lg:w-[11.5rem]" />
+        <h2 className={`whitespace-nowrap ${titleClass} text-[clamp(0.95rem,3.2vw,1.4rem)] sm:text-[clamp(1.35rem,2.2vw,1.85rem)] lg:text-[3.07rem]`}>
           {data.recognitionsTitleTop} <span className={accentClass}>{data.recognitionsTitleAccent}</span>
         </h2>
-        <span aria-hidden="true" className="h-[0.125rem] w-10 shrink-0 bg-[var(--color-line)] sm:w-20 lg:h-[0.1875rem] lg:w-[11.5rem]" />
+        <span aria-hidden="true" className="h-[0.125rem] w-8 shrink-0 bg-[var(--color-line)] sm:w-16 lg:h-[0.1875rem] lg:w-[11.5rem]" />
       </div>
 
       <ul className="mx-auto mt-6 grid max-w-[40rem] grid-cols-3 gap-3 sm:mt-8 sm:gap-5 lg:mt-[2.9rem] lg:flex lg:max-w-none lg:justify-center lg:gap-[2.5rem]">
         {data.recognitions.map((item, index) => {
-          const cardWidth = cardWidths[index] ?? cardWidths[0];
+          const cardWidth = item.cardWidth ?? cardWidths[index] ?? cardWidths[0];
           const size = { "--card-w": rem(cardWidth), "--logo-w": rem(item.width), "--logo-pct": `${(item.width / cardWidth) * 100}%` } as CSSProperties;
           return (
             <li

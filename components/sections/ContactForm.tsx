@@ -12,7 +12,7 @@ const base =
   "w-full appearance-none rounded-[0.6rem] border-[0.125rem] border-[var(--color-field-border)] bg-[var(--color-white)] pl-12 pr-4 font-ui text-[1rem] text-[var(--color-text-dark)] outline-none transition-colors placeholder:font-medium placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-gold)] sm:text-[1.05rem] lg:rounded-[0.63rem] lg:pl-[6rem] lg:pr-[1.5rem] lg:text-[1.5rem]";
 const field = `${base} h-14 lg:h-[4.5rem]`;
 /** the design's icon in front of each field */
-const icons = {
+const defaultIcons = {
   name: "LuUserRound",
   email: "LuMail",
   phone: "LuPhone",
@@ -61,6 +61,7 @@ export const ContactForm = ({ data, courseOptions }: { data?: ContactFormData; c
   const submit = useDummySubmit();
   if (!data) return null;
   const { fields } = data;
+  const icons = { ...defaultIcons, ...data.fieldIcons };
 
   // remounting the form (via key) after each send clears every field, including the select
   return (

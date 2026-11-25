@@ -1,9 +1,11 @@
 /**
- * Space between sections. On phones and tablets every section keeps the same empty space between its content and
- * the next section's content (two white sections each add half of it). From 1024px up each section takes the gap
- * the 1920px design has above it (1 design pixel = 0.0625rem), so the page lines up with the design.
+ * Uniform space between sections across all screen sizes (mobile, tablet, 1024px, 1440px).
+ * Mobile: py-12 (48px)
+ * Tablet: sm:py-14 md:py-16 (56px - 64px)
+ * 1024px Desktop: lg:py-20 (80px)
+ * 1440px+ Desktop: xl:py-24 (96px)
  */
-export const sectionSpace = "py-8 sm:py-10";
+export const sectionSpace = "py-12 sm:py-14 md:py-16 lg:py-20 xl:py-24";
 
 /** The sticky header's height, so a menu link scrolls its section to just below the header */
 export const scrollMargin = "scroll-mt-[4.5rem] sm:scroll-mt-[5rem] lg:scroll-mt-[5.25rem]";

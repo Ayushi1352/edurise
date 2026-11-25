@@ -48,8 +48,8 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
       </ul>
 
       <div className={`relative z-10 px-5 pb-10 pt-12 sm:px-8 sm:pb-12 sm:pt-16 lg:px-0 lg:pb-0 lg:pl-[7.06rem] lg:pt-[11.46rem] ${enter}`}>
-        <h1 className="font-display text-[length:min(2.6rem,calc((100vw-2.5rem)/10))] font-extrabold leading-[1.15] tracking-[-0.005em] text-[var(--color-white)] sm:text-[3.4rem] lg:text-[4.19rem] lg:leading-[4.88rem]">
-          {data.titleTop} <span className="text-[var(--color-gold)]">{data.titleAccent}</span>
+        <h1 className="font-display text-[clamp(1.35rem,5.2vw,2.1rem)] font-extrabold leading-[1.15] tracking-[-0.005em] text-[var(--color-white)] sm:text-[clamp(2.1rem,4.2vw,2.9rem)] lg:text-[4.19rem] lg:leading-[4.88rem]">
+          <span className="block">{data.titleTop} <span className="text-[var(--color-gold)]">{data.titleAccent}</span></span>
           <span className="block">{data.titleBottom}</span>
         </h1>
         <span aria-hidden="true" className="mt-5 block h-[0.3rem] w-24 rounded-full bg-[var(--color-gold)] lg:mt-[1.13rem] lg:h-[0.44rem] lg:w-[9.5rem]" />
@@ -72,14 +72,14 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
         </div>
       </div>
 
-      {/* phones and tablets: the student under the text, fading in from the navy; from 1024px up the whole hero's
-          background (the navy shade on its left is part of the desktop photo) */}
+      {/* clean photo with pure CSS gradients: fades from deep navy on desktop left & mobile top */}
       <div className="relative aspect-[1024/921] max-h-[36rem] w-full overflow-hidden lg:absolute lg:inset-0 lg:aspect-auto lg:max-h-none">
         <picture>
           <source media="(min-width: 1024px)" srcSet={desktopSet} />
           <img {...imageProps} srcSet={mobileSet} alt={data.imageAlt} className="absolute inset-0 h-full w-full object-cover object-top lg:object-right" />
         </picture>
-        <span aria-hidden="true" className="absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-[var(--color-navy-deep)] to-transparent lg:hidden" />
+        <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-[var(--color-navy-deep)] to-transparent lg:hidden" />
+        <span aria-hidden="true" className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-[var(--color-navy-deep)] from-[38%] via-[var(--color-navy-deep)]/90 via-[48%] to-transparent to-[65%] lg:block" />
       </div>
     </section>
   );

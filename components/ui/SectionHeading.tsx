@@ -83,8 +83,9 @@ export const SectionHeading = ({
 }: HeadingProps) => (
   <div data-reveal className={`flex flex-col items-center text-center ${className}`}>
     <SectionLabel text={label} icon={icon} sizeClass={labelSizeClass} lineClass={labelLineClass} iconClass={labelIconClass} gapClass={labelGapClass} />
-    <h2 className={`mt-3 text-[length:min(2rem,calc((100vw-2rem)/11))] sm:text-[2.5rem] lg:whitespace-nowrap ${titleClass} ${titleClassName}`}>
-      {titleTop} <span className={accentClass}>{titleAccent}</span>
+    <h2 className={`mt-3 text-[clamp(1.05rem,4vw,1.55rem)] sm:text-[clamp(1.5rem,2.5vw,2.1rem)] lg:whitespace-nowrap ${titleClass} ${titleClassName}`}>
+      <span className="block sm:inline">{titleTop} </span>
+      <span className={`block sm:inline ${accentClass}`}>{titleAccent}</span>
     </h2>
     {description && (
       <p className={`mx-auto mt-3 max-w-[46rem] text-[0.95rem] font-medium leading-relaxed text-[var(--color-text-muted)] sm:text-base lg:max-w-none ${descriptionClass}`}>

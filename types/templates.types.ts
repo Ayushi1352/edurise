@@ -28,6 +28,13 @@ export interface SiteMetadataData {
   description: string;
   icon: string;
   lang: string;
+  notFound?: {
+    title: string;
+    subtitle: string;
+    description: string;
+    buttonLabel: string;
+    buttonUrl: string;
+  };
 }
 
 export interface LinkItem {
@@ -64,11 +71,17 @@ export interface CompanyData {
   logoAlt: string;
   logoWidth: number;
   logoHeight: number;
+  contactInfo?: {
+    address: string;
+    phone: string;
+    email: string;
+  };
   contactItems: ContactItem[];
 }
 
 export interface FooterData {
   backgroundImage: string;
+  logoUrl?: string;
   /** the paragraph under the logo, one entry per line of the design */
   descriptionLines: string[];
   linksLabel: string;
@@ -148,6 +161,7 @@ export interface RecognitionItem {
   imageAlt: string;
   width: number;
   height: number;
+  cardWidth?: number;
 }
 
 export interface AboutData extends SplitTitle {
@@ -165,6 +179,7 @@ export interface AboutData extends SplitTitle {
 export interface CourseItem {
   id: string;
   title: string;
+  icon?: string;
   /** one entry per line of the card */
   descriptionLines: string[];
   /** the course's name in the contact form's list */
@@ -197,6 +212,7 @@ export interface FacultyItem {
 }
 
 export interface FacultyData extends SectionIntro {
+  badgeIcon?: string;
   previousLabel: string;
   nextLabel: string;
   items: FacultyItem[];
@@ -212,6 +228,7 @@ export interface EmployerItem {
 }
 
 export interface HiringData extends SectionIntro {
+  tileWidth?: number;
   employers: EmployerItem[];
 }
 
@@ -247,6 +264,13 @@ export interface ContactFormData {
     course: string;
     message: string;
   };
+  fieldIcons?: {
+    name?: string;
+    email?: string;
+    phone?: string;
+    course?: string;
+    message?: string;
+  };
   button: string;
   sending: string;
   successTitle: string;
@@ -256,6 +280,16 @@ export interface ContactFormData {
 
 interface Variants<T> {
   variants: Record<string, T>;
+}
+
+export interface TemplateComponent {
+  key: string;
+  component: string;
+}
+
+export interface TemplateComponentsConfig {
+  shared: Record<string, string>;
+  pages: Record<string, { components: TemplateComponent[] }>;
 }
 
 export interface EduRiseTemplateData {
@@ -278,6 +312,11 @@ export interface EduRiseTemplateData {
         Faq?: Variants<FaqData>;
         Contact?: Variants<ContactData>;
         ContactForm?: Variants<ContactFormData>;
+      };
+      templateComponents: {
+        shared?: Record<string, string>;
+        pages?: Record<string, { components: TemplateComponent[] }>;
+        [template: string]: any;
       };
     };
   };

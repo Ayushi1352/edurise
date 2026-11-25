@@ -8,7 +8,7 @@ export const FacultySection = ({ data }: { data?: FacultyData }) => {
   if (!data) return null;
 
   return (
-    <section id={data.id} className={`relative bg-[var(--color-bg-soft)] ${sectionSpace} lg:pb-0 lg:pt-[11.65rem] ${scrollMargin} ${sidePadding}`}>
+    <section id={data.id} className={`relative bg-[var(--color-bg-soft)] ${sectionSpace} ${scrollMargin} ${sidePadding}`}>
       <SectionHeading
         label={data.label}
         icon={data.icon}
