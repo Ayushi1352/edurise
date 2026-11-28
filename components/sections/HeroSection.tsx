@@ -7,6 +7,20 @@ import { scrollMargin } from "@/components/ui/sectionSpace";
 /** Plays once on load (CSS @starting-style), so the hero never waits for JavaScript */
 const enter = "transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] starting:translate-y-6 starting:opacity-0";
 
+/** each social network's brand colour on the side rail (by the link's id in templates.json; colours in globals.css) */
+const railBackground: Record<string, string> = {
+  facebook: "var(--color-facebook)",
+  linkedin: "var(--color-linkedin)",
+  instagram: "var(--color-instagram)",
+  x: "var(--color-x)",
+  youtube: "var(--color-youtube)",
+};
+
+/** navy → transparent along a smoothstep curve (opacity per 10% step), used over the top of the phone/tablet photo */
+const mobileFade = `linear-gradient(to bottom, ${[100, 97, 90, 78, 65, 50, 35, 22, 10, 3, 0]
+  .map((opacity, step) => `color-mix(in srgb, var(--color-navy-deep) ${opacity}%, transparent) ${step * 10}%`)
+  .join(", ")})`;
+
 const button =
   "h-[3.25rem] gap-3 rounded-[0.375rem] px-6 font-heading text-[1rem] font-bold sm:h-14 sm:px-8 sm:text-[1.1rem] lg:h-[4.81rem] lg:gap-[1.1rem] lg:px-0 lg:text-[1.625rem]";
 
@@ -39,7 +53,7 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.label}
-              style={{ background: social.background }}
+              style={{ background: railBackground[social.id] ?? "var(--color-navy)" }}
               className="grid h-[3.56rem] w-[3.56rem] place-items-center text-[var(--color-white)] transition-[width] duration-300 hover:w-[4.5rem]"
             >
               <Icon name={social.icon} className="size-[1.65rem]" />
@@ -79,7 +93,8 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
           <source media="(min-width: 1024px)" srcSet={desktopSet} />
           <img {...imageProps} srcSet={mobileSet} alt={data.imageAlt} className="absolute inset-0 h-full w-full object-cover object-[center_20%] lg:object-[82%_20%]" />
         </picture>
-        <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-[var(--color-navy-deep)] to-transparent lg:hidden" />
+        {/* phones and tablets: a smoothstep fade (flat at both ends, so no visible edge) that runs the navy text block into the photo without a dividing line */}
+        <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 -top-px h-[55%] lg:hidden" style={{ background: mobileFade }} />
         <span aria-hidden="true" className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-[var(--color-navy-deep)] from-[35%] via-[var(--color-navy-deep)]/90 via-[48%] to-transparent to-[65%] lg:block" />
       </div>
     </section>

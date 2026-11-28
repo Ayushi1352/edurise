@@ -1,5 +1,3 @@
-import type { CSSProperties } from "react";
-
 export interface ThemeFonts {
   primary: string;
   heading: string;
@@ -9,16 +7,6 @@ export interface ThemeFonts {
   serif: string;
 }
 
-/** CSS variables set on <html> from templates.json (fonts) */
-export type RootVariables = CSSProperties & {
-  "--font-primary": string;
-  "--font-heading": string;
-  "--font-ui": string;
-  "--font-display": string;
-  "--font-footer": string;
-  "--font-serif": string;
-};
-
 export interface ThemeData {
   fonts: ThemeFonts;
 }
@@ -26,9 +14,9 @@ export interface ThemeData {
 export interface SiteMetadataData {
   title: string;
   description: string;
-  icon: string;
   lang: string;
-  notFound?: {
+  /** the 404 page */
+  notFound: {
     title: string;
     subtitle: string;
     description: string;
@@ -81,7 +69,7 @@ export interface CompanyData {
 
 export interface FooterData {
   backgroundImage: string;
-  logoUrl?: string;
+  logoUrl: string;
   /** the paragraph under the logo, one entry per line of the design */
   descriptionLines: string[];
   linksLabel: string;
@@ -131,11 +119,6 @@ export interface SectionIntro extends SplitTitle {
   description: string;
 }
 
-export interface HeroSocialLink extends SocialLink {
-  /** colour (or gradient) of the square in the side rail */
-  background: string;
-}
-
 export interface HeroData extends SplitTitle {
   id: string;
   titleBottom: string;
@@ -152,7 +135,7 @@ export interface HeroData extends SplitTitle {
   primaryButton: ButtonData;
   secondaryButton: ButtonData;
   socialLabel: string;
-  socialLinks: HeroSocialLink[];
+  socialLinks: SocialLink[];
 }
 
 export interface RecognitionItem {
@@ -161,7 +144,6 @@ export interface RecognitionItem {
   imageAlt: string;
   width: number;
   height: number;
-  cardWidth?: number;
 }
 
 export interface AboutData extends SplitTitle {
@@ -179,7 +161,7 @@ export interface AboutData extends SplitTitle {
 export interface CourseItem {
   id: string;
   title: string;
-  icon?: string;
+  icon: string;
   /** one entry per line of the card */
   descriptionLines: string[];
   /** the course's name in the contact form's list */
@@ -212,7 +194,7 @@ export interface FacultyItem {
 }
 
 export interface FacultyData extends SectionIntro {
-  badgeIcon?: string;
+  badgeIcon: string;
   previousLabel: string;
   nextLabel: string;
   items: FacultyItem[];
@@ -228,7 +210,6 @@ export interface EmployerItem {
 }
 
 export interface HiringData extends SectionIntro {
-  tileWidth?: number;
   employers: EmployerItem[];
 }
 
@@ -256,20 +237,19 @@ export interface ContactData extends SplitTitle {
   descriptionLines: string[];
 }
 
+/** A form field: its placeholder (also its accessible name) and the icon in front (a name from components/ui/Icon.tsx) */
+export interface FormField {
+  placeholder: string;
+  icon: string;
+}
+
 export interface ContactFormData {
   fields: {
-    name: string;
-    email: string;
-    phone: string;
-    course: string;
-    message: string;
-  };
-  fieldIcons?: {
-    name?: string;
-    email?: string;
-    phone?: string;
-    course?: string;
-    message?: string;
+    name: FormField;
+    email: FormField;
+    phone: FormField;
+    course: FormField;
+    message: FormField;
   };
   button: string;
   sending: string;
@@ -285,11 +265,6 @@ interface Variants<T> {
 export interface TemplateComponent {
   key: string;
   component: string;
-}
-
-export interface TemplateComponentsConfig {
-  shared: Record<string, string>;
-  pages: Record<string, { components: TemplateComponent[] }>;
 }
 
 export interface EduRiseTemplateData {
@@ -314,9 +289,10 @@ export interface EduRiseTemplateData {
         ContactForm?: Variants<ContactFormData>;
       };
       templateComponents: {
-        shared?: Record<string, string>;
-        pages?: Record<string, { components: TemplateComponent[] }>;
-        [template: string]: any;
+        [template: string]: {
+          shared: Record<string, string>;
+          pages: Record<string, { components: TemplateComponent[] }>;
+        };
       };
     };
   };

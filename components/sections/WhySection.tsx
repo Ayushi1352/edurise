@@ -29,9 +29,10 @@ export const WhySection = ({ data }: { data?: WhyData }) => {
             lineClass="h-[0.19rem] w-10 lg:h-[0.25rem] lg:w-[4.88rem]"
             gapClass="gap-3 lg:gap-[1.13rem]"
           />
-          <h2 className="mt-3 font-ui text-[clamp(1.25rem,4.4vw,1.75rem)] font-extrabold leading-[1.15] tracking-[-0.01em] text-[var(--color-navy)] sm:text-[clamp(1.75rem,3.2vw,2.4rem)] lg:mt-[1.6rem] lg:text-[5.46rem] lg:leading-[6rem]">
-            <span className="block">{data.titleTop}</span>
-            <span className="block text-[var(--color-gold-text)]">{data.titleAccent}</span>
+          {/* one line on phones and tablets, the design's two lines from 1024px up */}
+          <h2 className="mt-3 text-balance font-ui text-[clamp(1.05rem,4.5vw,1.75rem)] font-extrabold leading-[1.15] tracking-[-0.01em] text-[var(--color-navy)] sm:text-[clamp(1.75rem,3.2vw,2.4rem)] lg:mt-[1.6rem] lg:text-[5.46rem] lg:leading-[6rem]">
+            <span className="lg:block">{data.titleTop} </span>
+            <span className="text-[var(--color-gold-text)] lg:block">{data.titleAccent}</span>
           </h2>
           <p className="mt-4 font-ui text-[1.05rem] leading-[1.6] text-[var(--color-text-dark)] sm:text-[1.2rem] lg:mt-[1.9rem] lg:text-[2.22rem] lg:leading-[2.94rem]">
             {data.descriptionLines.map((line) => (

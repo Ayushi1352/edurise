@@ -10,8 +10,7 @@ import { sectionId, useActiveSection } from "@/components/ui/useActiveSection";
 
 /** Desktop link with the gold underline of the current section */
 const linkClass = (current: boolean) =>
-  `relative whitespace-nowrap py-[0.4rem] font-sans text-[1.4rem] font-medium leading-none transition-colors after:absolute after:inset-x-0 after:-bottom-[0.35rem] after:h-[0.1875rem] after:rounded-full after:bg-[var(--color-gold)] after:transition-transform after:duration-300 ${
-    current ? "text-[var(--color-gold)] after:scale-x-100" : "text-[var(--color-white)] after:scale-x-0 hover:text-[var(--color-gold)]"
+  `relative whitespace-nowrap py-[0.4rem] font-sans text-[1.4rem] font-medium leading-none transition-colors after:absolute after:inset-x-0 after:-bottom-[0.35rem] after:h-[0.1875rem] after:rounded-full after:bg-[var(--color-gold)] after:transition-transform after:duration-300 ${current ? "text-[var(--color-gold)] after:scale-x-100" : "text-[var(--color-white)] after:scale-x-0 hover:text-[var(--color-gold)]"
   }`;
 
 /*
@@ -66,14 +65,12 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
       </p>
 
       <header
-        className={`sticky top-0 z-40 bg-[var(--color-navy-header)] transition-shadow duration-300 ${
-          compact ? "shadow-[0_0.5rem_1.75rem_-1rem_var(--color-shadow-strong)]" : ""
-        }`}
+        className={`sticky top-0 z-40 bg-[var(--color-navy-header)] transition-shadow duration-300 ${compact ? "shadow-[0_0.5rem_1.75rem_-1rem_var(--color-shadow-strong)]" : ""
+          }`}
       >
         <div
-          className={`flex items-center gap-4 px-4 transition-[height] duration-300 sm:px-6 lg:gap-0 lg:pl-[5.375rem] lg:pr-[2.5rem] ${
-            compact ? "h-[4.5rem] sm:h-[5rem] lg:h-[5.25rem]" : "h-[4.5rem] sm:h-[5rem] lg:h-[6.625rem]"
-          }`}
+          className={`flex items-center gap-4 px-4 transition-[height] duration-300 sm:px-6 lg:gap-0 lg:pl-[5.375rem] lg:pr-[2.5rem] ${compact ? "h-[4.5rem] sm:h-[5rem] lg:h-[5.25rem]" : "h-[4.5rem] sm:h-[5rem] lg:h-[6.625rem]"
+            }`}
         >
           <Link href={data.logoUrl} onClick={goHome} aria-label={data.homeLabel} className="shrink-0">
             <Image
@@ -124,9 +121,8 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
         <nav
           id="mobile-menu"
           aria-label={data.mobileNavLabel}
-          className={`absolute inset-x-4 top-full mt-2 grid max-h-[calc(100dvh-5.5rem)] overflow-hidden rounded-2xl bg-[var(--color-white)] shadow-[0_1.25rem_3.125rem_-1.25rem_var(--color-shadow-menu)] transition-[grid-template-rows,opacity] duration-500 sm:inset-x-6 lg:hidden ${
-            open ? "grid-rows-[1fr] opacity-100" : "pointer-events-none invisible grid-rows-[0fr] opacity-0"
-          }`}
+          className={`absolute inset-x-4 top-full mt-2 grid max-h-[calc(100dvh-5.5rem)] overflow-hidden rounded-2xl bg-[var(--color-white)] shadow-[0_1.25rem_3.125rem_-1.25rem_var(--color-shadow-menu)] transition-[grid-template-rows,opacity] duration-500 sm:inset-x-6 lg:hidden ${open ? "grid-rows-[1fr] opacity-100" : "pointer-events-none invisible grid-rows-[0fr] opacity-0"
+            }`}
         >
           <div className="min-h-0 overflow-y-auto">
             <ul className="flex flex-col px-5 py-4 sm:px-6">
@@ -135,9 +131,8 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
                   <a
                     href={link.url}
                     onClick={() => setOpen(false)}
-                    className={`flex items-center justify-between border-b border-[var(--color-line-soft)] py-3.5 font-sans text-lg font-semibold transition-colors hover:text-[var(--color-gold-dark)] ${
-                      sectionId(link.url) === active ? "text-[var(--color-gold-dark)]" : "text-[var(--color-navy)]"
-                    }`}
+                    className={`flex items-center justify-between border-b border-[var(--color-line-soft)] py-3.5 font-sans text-lg font-semibold transition-colors hover:text-[var(--color-gold-dark)] ${sectionId(link.url) === active ? "text-[var(--color-gold-dark)]" : "text-[var(--color-navy)]"
+                      }`}
                   >
                     {link.label}
                     <Icon name="LuChevronRight" className="size-4 text-[var(--color-gold-dark)]" strokeWidth={2.2} />

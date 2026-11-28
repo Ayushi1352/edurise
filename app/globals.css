@@ -49,12 +49,19 @@
   --color-linkedin: #0a7bc6;
   --color-x: #0f0f0f;
   --color-youtube: #e5141b;
+  --color-instagram: linear-gradient(45deg, #f9a12e 0%, #e8336c 45%, #a12ec2 100%);
 
   /* Shadows */
   --color-shadow: rgba(1, 33, 76, 0.1);
   --color-shadow-strong: rgba(1, 33, 76, 0.22);
   --color-shadow-gold: rgba(224, 156, 0, 0.45);
   --color-shadow-menu: rgba(1, 33, 76, 0.25);
+  --color-shadow-dark: rgba(0, 0, 0, 0.25);
   --color-overlay: rgba(1, 29, 71, 0.96);
   --color-overlay-soft: rgba(1, 29, 71, 0);
+  --color-overlay-mid: rgba(1, 29, 71, 0.55);
+  /* course card icon box over the photo */
+  --color-badge-bg: rgba(1, 20, 48, 0.35);
+  /* navy shade over the footer photo */
+  --color-footer-overlay: rgba(0, 22, 47, 0.9);
 }

@@ -5,12 +5,11 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { scrollMargin, sectionSpace, sidePadding } from "@/components/ui/sectionSpace";
 
 /** width of a logo tile in the 1920px design: every logo keeps its share of the tile on every screen */
-const DEFAULT_TILE_WIDTH = 166.3;
+const TILE_WIDTH = 166.3;
 
 /** Centred heading, then the employer logos on white tiles: 4 a row on phones, 5 on tablets, 10 from 1024px up */
 export const HiringSection = ({ data }: { data?: HiringData }) => {
   if (!data) return null;
-  const tileWidth = data.tileWidth ?? DEFAULT_TILE_WIDTH;
 
   return (
     <section id={data.id} className={`relative bg-[var(--color-bg-soft)] ${sectionSpace} ${scrollMargin} ${sidePadding}`}>
@@ -34,7 +33,7 @@ export const HiringSection = ({ data }: { data?: HiringData }) => {
             key={employer.id}
             data-reveal
             data-reveal-delay={(index % 10) * 40}
-            style={{ "--logo-w": `${(employer.width / tileWidth) * 100}%` } as CSSProperties}
+            style={{ "--logo-w": `${(employer.width / TILE_WIDTH) * 100}%` } as CSSProperties}
             className="grid aspect-[166/86] basis-[calc((100%-1.5rem)/4)] place-items-center rounded-lg bg-[var(--color-white)] px-1 shadow-[0_0.35rem_1rem_-0.4rem_var(--color-shadow-strong)] transition-transform duration-300 hover:-translate-y-1 sm:basis-[calc((100%-3rem)/5)] lg:aspect-auto lg:h-[5.4rem] lg:basis-[calc((100%-7.29rem)/10)] lg:rounded-[0.63rem] lg:px-0"
           >
             <Image

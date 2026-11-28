@@ -1,49 +1,41 @@
 "use client";
 
 import { useState } from "react";
-import type { ContactFormData } from "@/types/templates.types";
+import type { ContactFormData, FormField } from "@/types/templates.types";
 import { useDummySubmit } from "@/components/ui/useDummySubmit";
 import { Icon } from "@/components/ui/Icon";
 import { FormSuccess, Spinner } from "@/components/ui/FormSuccess";
 import { buttonArrow, buttonClass } from "@/components/ui/buttonStyles";
 
-/** White fields with a light grey border and a navy outline icon in front */
+/** White fields with a light grey border and the design's navy outline icon in front (icon names come from templates.json) */
 const base =
-  "w-full appearance-none rounded-[0.6rem] border-[0.125rem] border-[var(--color-field-border)] bg-[var(--color-white)] pl-12 pr-4 font-ui text-[1rem] text-[var(--color-text-dark)] outline-none transition-colors placeholder:font-medium placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-gold)] sm:text-[1.05rem] lg:rounded-[0.63rem] lg:pl-[6rem] lg:pr-[1.5rem] lg:text-[1.5rem]";
-const field = `${base} h-14 lg:h-[4.5rem]`;
-/** the design's icon in front of each field */
-const defaultIcons = {
-  name: "LuUserRound",
-  email: "LuMail",
-  phone: "LuPhone",
-  course: "LuGraduationCap",
-  message: "LuMessageCircle",
-};
-const iconClass = "pointer-events-none absolute left-4 size-6 text-[var(--color-navy)] lg:left-[2rem] lg:size-[2.19rem]";
+  "w-full appearance-none rounded-[0.6rem] border-[0.125rem] border-[var(--color-field-border)] bg-[var(--color-white)] pl-11 pr-4 font-ui text-[0.95rem] text-[var(--color-text-dark)] outline-none transition-colors placeholder:font-medium placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-gold)] sm:text-[1rem] lg:rounded-[0.63rem] lg:pl-[5rem] lg:pr-[1.5rem] lg:text-[1.3rem]";
+const field = `${base} h-12 lg:h-[3.75rem]`;
+const iconClass = "pointer-events-none absolute left-3.5 size-5 text-[var(--color-navy)] lg:left-[1.75rem] lg:size-[1.8rem]";
 
-const Field = ({ name, type = "text", label, icon, autoComplete }: { name: string; type?: string; label: string; icon: string; autoComplete?: string }) => (
+const Field = ({ name, type = "text", field: data, autoComplete }: { name: string; type?: string; field: FormField; autoComplete?: string }) => (
   <label className="relative flex items-center">
-    <Icon name={icon} className={iconClass} strokeWidth={1.6} />
-    <input name={name} type={type} required placeholder={label} aria-label={label} autoComplete={autoComplete} className={field} />
+    <Icon name={data.icon} className={iconClass} strokeWidth={1.6} />
+    <input name={name} type={type} required placeholder={data.placeholder} aria-label={data.placeholder} autoComplete={autoComplete} className={field} />
   </label>
 );
 
-const SelectField = ({ name, placeholder, icon, options }: { name: string; placeholder: string; icon: string; options: string[] }) => {
+const SelectField = ({ name, field: data, options }: { name: string; field: FormField; options: string[] }) => {
   const [value, setValue] = useState("");
 
   return (
     <label className="relative flex items-center">
-      <Icon name={icon} className={iconClass} strokeWidth={1.6} />
+      <Icon name={data.icon} className={iconClass} strokeWidth={1.6} />
       <select
         name={name}
         value={value}
         required
         onChange={(event) => setValue(event.target.value)}
-        aria-label={placeholder}
-        className={`${field} cursor-pointer pr-12 lg:pr-[4.5rem] ${value === "" ? "text-[var(--color-text-muted)]" : ""}`}
+        aria-label={data.placeholder}
+        className={`${field} cursor-pointer pr-11 lg:pr-[4rem] ${value === "" ? "text-[var(--color-text-muted)]" : ""}`}
       >
         <option value="" disabled>
-          {placeholder}
+          {data.placeholder}
         </option>
         {options.map((option) => (
           <option key={option} value={option} className="text-[var(--color-text-dark)]">
@@ -51,7 +43,7 @@ const SelectField = ({ name, placeholder, icon, options }: { name: string; place
           </option>
         ))}
       </select>
-      <Icon name="LuChevronDown" className="pointer-events-none absolute right-4 size-6 text-[var(--color-navy)] lg:right-[1.9rem] lg:size-[1.9rem]" strokeWidth={2.2} />
+      <Icon name="LuChevronDown" className="pointer-events-none absolute right-3.5 size-5 text-[var(--color-navy)] lg:right-[1.6rem] lg:size-[1.6rem]" strokeWidth={2.2} />
     </label>
   );
 };
@@ -61,7 +53,6 @@ export const ContactForm = ({ data, courseOptions }: { data?: ContactFormData; c
   const submit = useDummySubmit();
   if (!data) return null;
   const { fields } = data;
-  const icons = { ...defaultIcons, ...data.fieldIcons };
 
   // remounting the form (via key) after each send clears every field, including the select
   return (
@@ -70,24 +61,24 @@ export const ContactForm = ({ data, courseOptions }: { data?: ContactFormData; c
       onSubmit={submit.onSubmit}
       onInput={submit.onInput}
       aria-busy={submit.sending}
-      className="grid gap-x-[2.31rem] gap-y-4 sm:grid-cols-2 sm:gap-y-5 lg:gap-y-[1.94rem]"
+      className="grid gap-x-5 gap-y-3 sm:grid-cols-2 sm:gap-y-4 lg:gap-x-[1.9rem] lg:gap-y-[1.5rem]"
     >
-      <Field name="name" label={fields.name} icon={icons.name} autoComplete="name" />
-      <Field name="email" type="email" label={fields.email} icon={icons.email} autoComplete="email" />
-      <Field name="phone" type="tel" label={fields.phone} icon={icons.phone} autoComplete="tel" />
-      <SelectField name="course" placeholder={fields.course} icon={icons.course} options={courseOptions} />
+      <Field name="name" field={fields.name} autoComplete="name" />
+      <Field name="email" type="email" field={fields.email} autoComplete="email" />
+      <Field name="phone" type="tel" field={fields.phone} autoComplete="tel" />
+      <SelectField name="course" field={fields.course} options={courseOptions} />
       <label className="relative block sm:col-span-2">
-        <Icon name={icons.message} className={`${iconClass} top-4 lg:top-[1.2rem]`} strokeWidth={1.6} />
+        <Icon name={fields.message.icon} className={`${iconClass} top-3.5 lg:top-[1.1rem]`} strokeWidth={1.6} />
         <textarea
           name="message"
           required
-          rows={4}
-          placeholder={fields.message}
-          aria-label={fields.message}
-          className={`${base} h-32 resize-y pt-4 lg:h-[8.44rem] lg:min-h-[8.44rem] lg:pt-[1.3rem]`}
+          rows={3}
+          placeholder={fields.message.placeholder}
+          aria-label={fields.message.placeholder}
+          className={`${base} h-28 resize-y pt-3 lg:h-[7rem] lg:min-h-[7rem] lg:pt-[1.1rem]`}
         />
       </label>
-      <div className="flex justify-center sm:col-span-2 lg:mt-[-0.06rem]">
+      <div className="mt-1 flex justify-center sm:col-span-2 lg:mt-0">
         {submit.showMessage ? (
           <FormSuccess
             name={submit.name}
@@ -103,7 +94,7 @@ export const ContactForm = ({ data, courseOptions }: { data?: ContactFormData; c
           <button
             type="submit"
             disabled={submit.sending}
-            className={`${buttonClass} h-14 w-full max-w-[18rem] gap-3 rounded-full font-ui text-[1.15rem] font-bold disabled:cursor-wait disabled:opacity-80 lg:h-[4.44rem] lg:w-[23rem] lg:max-w-none lg:gap-[1.1rem] lg:text-[1.81rem]`}
+            className={`${buttonClass} h-12 w-full max-w-[15rem] gap-2.5 rounded-full font-ui text-[1.05rem] font-bold disabled:cursor-wait disabled:opacity-80 lg:h-[3.75rem] lg:w-[19rem] lg:max-w-none lg:gap-[1rem] lg:text-[1.5rem]`}
           >
             {submit.sending ? (
               <>

@@ -13,6 +13,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import {
   LuArrowRight,
   LuArrowUp,
+  LuBookOpen,
   LuCheck,
   LuChevronDown,
   LuChevronLeft,
@@ -40,6 +41,7 @@ const icons: Record<string, IconType> = {
   FaYoutube,
   LuArrowRight,
   LuArrowUp,
+  LuBookOpen,
   LuCheck,
   LuChevronDown,
   LuChevronLeft,

@@ -20,9 +20,10 @@ export const FaqSection = ({ data }: { data?: FaqData }) => {
               lineClass="h-[0.22rem] w-10 lg:h-[0.31rem] lg:w-[4.06rem]"
               gapClass="gap-3 lg:gap-[1.38rem]"
             />
-            <h2 className="mt-3 font-ui text-[clamp(1.25rem,4.4vw,1.75rem)] font-extrabold leading-[1.15] tracking-[-0.01em] text-[var(--color-navy)] sm:text-[clamp(1.75rem,3.2vw,2.4rem)] lg:mt-[1.05rem] lg:text-[4.29rem] lg:leading-[4.88rem]">
-              <span className="block">{data.titleTop}</span>
-              <span className="block">
+            {/* one line on phones and tablets where it fits, the design's two lines from 1024px up */}
+            <h2 className="mt-3 text-balance font-ui text-[clamp(1.05rem,4.3vw,1.75rem)] font-extrabold leading-[1.15] tracking-[-0.01em] text-[var(--color-navy)] sm:text-[clamp(1.75rem,3.2vw,2.4rem)] lg:mt-[1.05rem] lg:text-[4.29rem] lg:leading-[4.88rem]">
+              <span className="lg:block">{data.titleTop} </span>
+              <span className="lg:block">
                 {data.titleAccentLead} <span className="text-[var(--color-gold-text)]">{data.titleAccent}</span>
               </span>
             </h2>

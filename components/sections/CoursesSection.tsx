@@ -65,11 +65,11 @@ export const CoursesSection = ({ data }: { data?: CoursesData }) => {
               {/* navy shade under the text */}
               <span
                 aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-b from-[var(--color-overlay-soft)] from-[38%] via-[rgba(1,29,71,0.55)] via-[62%] to-[var(--color-overlay)]"
+                className="absolute inset-0 bg-gradient-to-b from-[var(--color-overlay-soft)] from-[38%] via-[var(--color-overlay-mid)] via-[62%] to-[var(--color-overlay)]"
               />
               <span className="absolute inset-x-0 bottom-0 flex items-center gap-3 px-4 pb-4 sm:gap-4 sm:px-5 sm:pb-5 lg:gap-0 lg:pb-[1.9rem] lg:pl-[1.625rem] lg:pr-[0.5rem]">
-                <span className="grid size-[3.25rem] shrink-0 place-items-center rounded-[0.7rem] border-[0.09rem] border-[var(--color-gold)] bg-[rgba(1,20,48,0.35)] text-[var(--color-gold)] transition-colors duration-300 group-hover:bg-[var(--color-gold)] group-hover:text-[var(--color-navy)] lg:size-[5.25rem] lg:rounded-[0.875rem] lg:border-[0.1rem]">
-                  <Icon name={course.icon ?? "LuGraduationCap"} className="size-7 lg:size-[3.1rem]" strokeWidth={1.7} />
+                <span className="grid size-[3.25rem] shrink-0 place-items-center rounded-[0.7rem] border-[0.09rem] border-[var(--color-gold)] bg-[var(--color-badge-bg)] text-[var(--color-gold)] transition-colors duration-300 group-hover:bg-[var(--color-gold)] group-hover:text-[var(--color-navy)] lg:size-[5.25rem] lg:rounded-[0.875rem] lg:border-[0.1rem]">
+                  <Icon name={course.icon} className="size-7 lg:size-[3.1rem]" strokeWidth={1.7} />
                 </span>
                 <span aria-hidden="true" className="h-14 w-[0.125rem] shrink-0 self-center bg-[var(--color-gold)] lg:ml-[1.25rem] lg:h-[6.5rem]" />
                 <span className="min-w-0 text-[var(--color-white)] lg:ml-[1.44rem]">

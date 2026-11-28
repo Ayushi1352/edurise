@@ -27,17 +27,17 @@ export const ContactSection = ({ data, form, courseOptions }: Props) => {
           titleTop={data.titleTop}
           titleAccent={data.titleAccent}
           description={data.descriptionLines}
-          labelSizeClass="font-ui text-[1.2rem] font-extrabold lg:text-[2.6rem]"
-          labelLineClass="h-[0.22rem] w-9 lg:h-[0.31rem] lg:w-[3.63rem]"
-          labelIconClass="size-7 lg:size-[2.75rem]"
-          labelGapClass="gap-3 lg:gap-[1.4rem]"
-          titleClassName="!font-ui !tracking-[-0.01em] lg:mt-[0.75rem] lg:text-[4.84rem] lg:leading-[5.25rem]"
-          descriptionClass="font-ui text-[var(--color-text-soft)] lg:mt-[0.7rem] lg:text-[1.89rem] lg:leading-[2.56rem]"
+          labelSizeClass="font-ui text-[1.1rem] font-extrabold lg:text-[2.2rem]"
+          labelLineClass="h-[0.2rem] w-8 lg:h-[0.28rem] lg:w-[3.2rem]"
+          labelIconClass="size-6 lg:size-[2.35rem]"
+          labelGapClass="gap-2.5 lg:gap-[1.2rem]"
+          titleClassName="!font-ui !tracking-[-0.01em] lg:mt-[0.6rem] lg:text-[4rem] lg:leading-[4.4rem]"
+          descriptionClass="font-ui text-[0.9rem] text-[var(--color-text-soft)] sm:text-[0.95rem] lg:mt-[0.6rem] lg:text-[1.6rem] lg:leading-[2.2rem]"
         />
 
         <div
           data-reveal
-          className="mx-auto mt-8 max-w-[48rem] rounded-2xl bg-[var(--color-white)] px-4 pb-6 pt-5 shadow-[0_1.2rem_2.5rem_-1.2rem_var(--color-shadow-strong)] sm:mt-10 sm:px-7 sm:pb-8 sm:pt-7 lg:mt-[3.1rem] lg:w-[91.31rem] lg:max-w-none lg:rounded-[1.75rem] lg:px-[2.88rem] lg:pb-[1.75rem] lg:pt-[2.63rem]"
+          className="mx-auto mt-6 max-w-[44rem] rounded-2xl bg-[var(--color-white)] px-4 pb-5 pt-4 shadow-[0_1.2rem_2.5rem_-1.2rem_var(--color-shadow-strong)] sm:mt-8 sm:px-6 sm:pb-6 sm:pt-6 lg:mt-[2.5rem] lg:w-[80rem] lg:max-w-none lg:rounded-[1.5rem] lg:px-[2.5rem] lg:pb-[2rem] lg:pt-[2.25rem]"
         >
           <ContactForm data={form} courseOptions={courseOptions} />
         </div>

@@ -13,7 +13,6 @@
     "metadata": {
       "title": "EduRise Learning Academy | Management Programs",
       "description": "EduRise Learning Academy offers industry-focused PGDM, PGDM (IB), PGDM (FM), PGDM (BDA), Executive PGDM and certificate programs with expert faculty and strong placements.",
-      "icon": "/images/favicon.png",
       "lang": "en",
       "notFound": {
         "title": "404",
@@ -239,36 +238,31 @@
                   "id": "facebook",
                   "icon": "FaFacebookF",
                   "label": "Facebook",
-                  "url": "https://www.facebook.com/",
-                  "background": "var(--color-facebook)"
+                  "url": "https://www.facebook.com/"
                 },
                 {
                   "id": "linkedin",
                   "icon": "FaLinkedinIn",
                   "label": "LinkedIn",
-                  "url": "https://www.linkedin.com/",
-                  "background": "var(--color-linkedin)"
+                  "url": "https://www.linkedin.com/"
                 },
                 {
                   "id": "instagram",
                   "icon": "FaInstagram",
                   "label": "Instagram",
-                  "url": "https://www.instagram.com/",
-                  "background": "linear-gradient(45deg, #f9a12e 0%, #e8336c 45%, #a12ec2 100%)"
+                  "url": "https://www.instagram.com/"
                 },
                 {
                   "id": "x",
                   "icon": "FaXTwitter",
                   "label": "X",
-                  "url": "https://x.com/",
-                  "background": "var(--color-x)"
+                  "url": "https://x.com/"
                 },
                 {
                   "id": "youtube",
                   "icon": "FaYoutube",
                   "label": "YouTube",
-                  "url": "https://www.youtube.com/",
-                  "background": "var(--color-youtube)"
+                  "url": "https://www.youtube.com/"
                 }
               ]
             }
@@ -298,24 +292,21 @@
                   "image": "/images/recognition-saqs.webp",
                   "imageAlt": "SAQS Accredited",
                   "width": 276,
-                  "height": 180,
-                  "cardWidth": 395
+                  "height": 180
                 },
                 {
                   "id": "great-place-to-work",
                   "image": "/images/recognition-great-place-to-work.webp",
                   "imageAlt": "Great Place To Work Certified",
                   "width": 144,
-                  "height": 211,
-                  "cardWidth": 372
+                  "height": 211
                 },
                 {
                   "id": "aacsb",
                   "image": "/images/recognition-aacsb.webp",
                   "imageAlt": "AACSB Business Education Alliance Member",
                   "width": 359,
-                  "height": 154,
-                  "cardWidth": 394
+                  "height": 154
                 }
               ]
             }
@@ -500,7 +491,6 @@
               "titleTop": "Where Our",
               "titleAccent": "Students Work?",
               "description": "Our students are hired by leading global and national organizations across diverse Industries.",
-              "tileWidth": 166.3,
               "employers": [
                 {
                   "id": "tech-mahindra",
@@ -926,71 +916,37 @@
           "variants": {
             "EduRiseContactForm1": {
               "fields": {
-                "name": "Your Full Name*",
-                "email": "Your Email Address*",
-                "phone": "Your Phone Number*",
-                "course": "Select Course Interest*",
-                "message": "Your Message*"
+                "name": {
+                  "placeholder": "Your Full Name*",
+                  "icon": "LuUserRound"
+                },
+                "email": {
+                  "placeholder": "Your Email Address*",
+                  "icon": "LuMail"
+                },
+                "phone": {
+                  "placeholder": "Your Phone Number*",
+                  "icon": "LuPhone"
+                },
+                "course": {
+                  "placeholder": "Select Course Interest*",
+                  "icon": "LuBookOpen"
+                },
+                "message": {
+                  "placeholder": "Your Message*",
+                  "icon": "LuMessageCircle"
+                }
               },
               "button": "Send Message",
               "sending": "Sending…",
               "successTitle": "Thank you, {name}!",
               "success": "Your message has been received. Our admissions team will get back to you shortly.",
-              "closeLabel": "Close message",
-              "fieldIcons": {
-                "name": "LuUserRound",
-                "email": "LuMail",
-                "phone": "LuPhone",
-                "course": "LuBookOpen",
-                "message": "LuMessageCircle"
-              }
+              "closeLabel": "Close message"
             }
           }
         }
       },
       "templateComponents": {
-        "shared": {
-          "Header": "EduRiseHeader1",
-          "Footer": "common.Footer"
-        },
-        "pages": {
-          "home": {
-            "components": [
-              {
-                "key": "HeroSection",
-                "component": "EduRiseHero1"
-              },
-              {
-                "key": "AboutSection",
-                "component": "EduRiseAbout1"
-              },
-              {
-                "key": "CoursesSection",
-                "component": "EduRiseCourses1"
-              },
-              {
-                "key": "WhySection",
-                "component": "EduRiseWhy1"
-              },
-              {
-                "key": "FacultySection",
-                "component": "EduRiseFaculty1"
-              },
-              {
-                "key": "HiringSection",
-                "component": "EduRiseHiring1"
-              },
-              {
-                "key": "FaqSection",
-                "component": "EduRiseFaq1"
-              },
-              {
-                "key": "ContactSection",
-                "component": "EduRiseContact1"
-              }
-            ]
-          }
-        },
         "template-1": {
           "shared": {
             "Header": "EduRiseHeader1",

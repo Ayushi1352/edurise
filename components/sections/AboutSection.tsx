@@ -5,7 +5,7 @@ import { Icon } from "@/components/ui/Icon";
 import { accentClass, titleClass } from "@/components/ui/SectionHeading";
 import { scrollMargin, sectionSpace, sidePadding } from "@/components/ui/sectionSpace";
 
-/** width of each recognition card in the 1920px design (the logo inside keeps its own design size) */
+/** width of each recognition card in the 1920px design, by its place in the row (the logo inside keeps its own design size) */
 const cardWidths = [395, 372, 394];
 const rem = (px: number) => `${px / 16}rem`;
 
@@ -30,9 +30,8 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
 
       {/* welcome text */}
       <div data-reveal className="mt-8 text-center sm:mt-10 lg:mt-[2.1rem]">
-        <h2 className={`${titleClass} text-[clamp(1.15rem,4vw,1.6rem)] sm:text-[clamp(1.55rem,2.6vw,2.1rem)] lg:text-[3.24rem] lg:leading-[3.6rem]`}>
-          <span className="block sm:inline">{data.titleTop} </span>
-          <span className={`block sm:inline ${accentClass}`}>{data.titleAccent}</span>
+        <h2 className={`${titleClass} text-balance text-[clamp(0.95rem,4.1vw,1.6rem)] sm:text-[clamp(1.55rem,2.6vw,2.1rem)] lg:text-[3.24rem] lg:leading-[3.6rem]`}>
+          {data.titleTop} <span className={accentClass}>{data.titleAccent}</span>
         </h2>
         <span aria-hidden="true" className="mx-auto mt-3 flex h-[0.2rem] w-40 lg:mt-[1.25rem] lg:h-[0.25rem] lg:w-[17.56rem]">
           <span className="w-[32%] rounded-l-full bg-[var(--color-navy)]" />
@@ -59,7 +58,7 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
 
       <ul className="mx-auto mt-6 grid max-w-[40rem] grid-cols-3 gap-3 sm:mt-8 sm:gap-5 lg:mt-[2.9rem] lg:flex lg:max-w-none lg:justify-center lg:gap-[2.5rem]">
         {data.recognitions.map((item, index) => {
-          const cardWidth = item.cardWidth ?? cardWidths[index] ?? cardWidths[0];
+          const cardWidth = cardWidths[index] ?? cardWidths[0];
           const size = { "--card-w": rem(cardWidth), "--logo-w": rem(item.width), "--logo-pct": `${(item.width / cardWidth) * 100}%` } as CSSProperties;
           return (
             <li

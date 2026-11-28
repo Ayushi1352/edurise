@@ -1,7 +1,8 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { Albert_Sans, Figtree, Merriweather, Montserrat, Noto_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import rawData from "@/data/templates.json";
-import type { EduRiseTemplateData, RootVariables } from "@/types/templates.types";
+import type { EduRiseTemplateData } from "@/types/templates.types";
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -20,28 +21,23 @@ const sectionData = templateData.categories.Education.sections;
 const commonData = templateData.common;
 const headerData = sectionData.Header?.variants?.EduRiseHeader1;
 
-const rootVariables: RootVariables = {
+const rootVariables = {
   "--font-primary": commonData.theme.fonts.primary,
   "--font-heading": commonData.theme.fonts.heading,
   "--font-ui": commonData.theme.fonts.ui,
   "--font-display": commonData.theme.fonts.display,
   "--font-footer": commonData.theme.fonts.footer,
   "--font-serif": commonData.theme.fonts.serif,
-};
+} as CSSProperties;
 
 const fontVariables = [figtree, jakarta, albertSans, montserrat, notoSans, merriweather].map((font) => font.variable).join(" ");
 
 export const metadata: Metadata = {
   title: commonData.metadata.title,
   description: commonData.metadata.description,
-  icons: {
-    icon: commonData.metadata.icon,
-    shortcut: commonData.metadata.icon,
-    apple: commonData.metadata.icon,
-  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang={commonData.metadata.lang}
